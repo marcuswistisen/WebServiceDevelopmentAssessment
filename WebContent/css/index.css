@@ -100,24 +100,6 @@ body
 	margin-bottom : 10px;
 }
 
-#n_header
-{
-	width : 700px;
-	height : 50px;
-	position : fixed;
-	left : 200px;
-	top : 0px;
-	background : red;
-}
-
-#n_header_fix
-{
-	width : 700px;
-	height : 50px;
-	position : relative;
-	background : gray;
-}
-
 #article_wrapper
 {
 	position : relative;

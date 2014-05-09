@@ -15,32 +15,32 @@
 			NEWSAPP
 		</div>
 		<div id="nav">
-			<a href="#All">
-			<div id="nav_item" class="nav_item">
+			<a href="?cat=all">
+			<div id="nav_item" class="nav_item" style="background : #5b5b5b">
 				ALL
 			</div>
 			</a>
-			<a href="#sports">
+			<a href="?cat=sports">
 			<div id="nav_item" class="nav_item">
 				SPORTS
 			</div>
 			</a>
-			<a href="#games">
+			<a href="?cat=games">
 			<div id="nav_item" class="nav_item">
 				GAMES
 			</div>
 			</a>
-			<a href="#entertainment">
+			<a href="?cat=entertainment">
 			<div id="nav_item" class="nav_item">
 				ENTERTAINMENT
 			</div>
 			</a>
-			<a href="#business">
+			<a href="?cat=business">
 			<div id="nav_item" class="nav_item">
 				BUSINESS
 			</div>
 			</a>
-			<a href="#politics">
+			<a href="?cat=politics">
 			<div id="nav_item" class="nav_item">
 				POLITICS
 			</div>
@@ -58,8 +58,6 @@
 		</div>
 	</div>
 	<div id="right">
-		<div id="n_header">NEWS CATEGORY</div>
-		<div id="h_header_fix"></div>
 		<div id="article_wrapper">
 			<div id="article_header">
 				<div id="article_title" class="article_title">
