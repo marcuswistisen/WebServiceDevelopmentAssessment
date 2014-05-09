@@ -58,7 +58,68 @@
 		</div>
 	</div>
 	<div id="right">
-		Testing
+		<div id="n_header">NEWS CATEGORY</div>
+		<div id="h_header_fix"></div>
+		<div id="article_wrapper">
+			<div id="article_header">
+				<div id="article_title" class="article_title">
+					Article Title
+				</div>
+				<div id="article_author" class="author_name">
+					By Author Name
+				</div>
+				<div id="article_published" class="article_published">
+					02-02-2222
+				</div>
+			</div>
+			<div id="article_summary" class="article_summary">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Nam urna ante, facilisis scelerisque lacinia vitae, blandit bibendum ligula.
+				 Maecenas luctus venenatis sem, ac mattis erat porta sit amet. Pellentesque egestas orci eu mi dignissim,
+				  non commodo est accumsan. Ut congue arcu neque, a rutrum enim eleifend vitae. Aliquam lacinia velit
+				  sit amet nunc viverra, non consectetur dui pellentesque. Cras eu ipsum tempor sapien tristique semper.
+				  
+			</div>
+			<div id="article_footer">
+				<div id="article_category" class="article_category">
+					CATEGORY - blah
+				</div>
+				<div id="article_readmore" class="article_readmore">
+					<a href="#readmore">Read more</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="article_wrapper">
+			<div id="article_header">
+				<div id="article_title" class="article_title">
+					Article Title
+				</div>
+				<div id="article_author" class="author_name">
+					By Author Name
+				</div>
+				<div id="article_published" class="article_published">
+					02-02-2222
+				</div>
+			</div>
+			<div id="article_summary" class="article_summary">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Nam urna ante, facilisis scelerisque lacinia vitae, blandit bibendum ligula.
+				 Maecenas luctus venenatis sem, ac mattis erat porta sit amet. Pellentesque egestas orci eu mi dignissim,
+				  non commodo est accumsan. Ut congue arcu neque, a rutrum enim eleifend vitae. Aliquam lacinia velit
+				  sit amet nunc viverra, non consectetur dui pellentesque. Cras eu ipsum tempor sapien tristique semper.
+				  
+			</div>
+			<div id="article_footer">
+				<div id="article_category" class="article_category">
+					CATEGORY - blah
+				</div>
+				<div id="article_readmore" class="article_readmore">
+					<a href="#readmore">Read more</a>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </body>
 </html>

@@ -3,7 +3,7 @@ body
 	margin : 0px;
 	padding : 0px;
 	background : #dddddd;
-	font-family : "sans-serif",Verdana,Arial;
+	font-family : sans-serif;
 }
 
 #left
@@ -91,11 +91,107 @@ body
 #right
 {
 	position : absolute;
-	width : 680px;
-	min-height : 480px;
+	width : 700px;
+	min-height : 500px;
 	height : 700px;
+	max-height : 50000px;
 	left : 200px;
 	background : white;
 	margin-bottom : 10px;
-	padding: 10px;s
+}
+
+#n_header
+{
+	width : 700px;
+	height : 50px;
+	position : fixed;
+	left : 200px;
+	top : 0px;
+	background : red;
+}
+
+#n_header_fix
+{
+	width : 700px;
+	height : 50px;
+	position : relative;
+	background : gray;
+}
+
+#article_wrapper
+{
+	position : relative;
+	margin-bottom : 10px;
+	width : 700px;
+	min-height : 100px;
+	background : red;
+}
+
+#article_header
+{
+	position : relative;
+	width : 690px;
+	height : 19px;
+	background : #40A8E8;
+	padding : 5px;
+	border-bottom : 1px solid #2281b7;
+}
+
+#article_header > #article_title
+{
+	position : absolute;
+	left : 5px;
+	width : 350px;
+	height : 20px;
+}
+
+#article_header > #article_author
+{
+	position : absolute;
+	left : 355px;
+	height : 20px;
+	width : 250px;
+}
+
+#article_header > #article_published
+{
+	position : absolute;
+	right : 5px;
+	height : 20px;
+	width : 90px;
+}
+
+#article_summary
+{
+	position : relative;
+	width : 690px;
+	min-height : 59px;
+	padding : 5px;
+	background : #88c1e2;
+	border-bottom : 1px solid #2281b7;
+}
+
+#article_footer
+{
+	position : relative;
+	width : 690px;
+	min-height : 20px;
+	padding : 5px;
+	background : #40A8E8;
+}
+
+#article_footer > #article_category
+{
+	position : absolute;
+	width : 600px;
+	height : 20px;
+	left : 5px;
+}
+
+#article_footer > #article_readmore
+{
+	position : absolute;
+	width : 80px;
+	height : 20px;
+	right : 5px;
 }
