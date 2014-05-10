@@ -45,7 +45,7 @@
 				if(navItems[i].equals(cat))
 				{
 				%>
-				<a href="?cat=<%=navItems[i] %>">
+				<a href="?cat=<%=navItems[i]%>">
 					<div id="nav_item" class="nav_item" style="background : #5b5b5b">
 						<%=navItems[i].toUpperCase()%>
 					</div>
@@ -55,7 +55,7 @@
 				else
 				{
 				%>
-				<a href="?cat=<%=navItems[i] %>">
+				<a href="?cat=<%=navItems[i]%>">
 					<div id="nav_item" class="nav_item">
 						<%=navItems[i].toUpperCase()%>
 					</div>
@@ -66,7 +66,7 @@
 		%>
 		</div>
 		<div id="login">
-			<form action="#" method="POST">
+			<form action="loginaction.jsp" method="POST">
 				<div id="log_label" class="log_label">LOGIN</div>
 				<label>Username : </label><br/>
 					<input id="log_input" type="text" name="log_username" /><br/>
