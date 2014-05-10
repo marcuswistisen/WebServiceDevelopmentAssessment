@@ -45,7 +45,7 @@
 				if(navItems[i].equals(cat))
 				{
 				%>
-				<a href="?cat=<%=navItems[i] %>">
+				<a href="?cat=<%=navItems[i]%>">
 					<div id="nav_item" class="nav_item" style="background : #5b5b5b">
 						<%=navItems[i].toUpperCase()%>
 					</div>
@@ -55,7 +55,7 @@
 				else
 				{
 				%>
-				<a href="?cat=<%=navItems[i] %>">
+				<a href="?cat=<%=navItems[i]%>">
 					<div id="nav_item" class="nav_item">
 						<%=navItems[i].toUpperCase()%>
 					</div>
