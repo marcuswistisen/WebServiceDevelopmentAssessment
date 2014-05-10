@@ -36,11 +36,11 @@ public class ArticleService {
 		  return getArticleApp().getArticles().findById(id);
 	 }
 	 
-	 @Path("article")
+	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML) 
 	 @XmlElementRef
-	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag) throws JAXBException, IOException{ 
+	 public ArrayList<Article> getArticles(@QueryParam("id") String tag) throws JAXBException, IOException{ 
 		 return getArticleApp().getArticles().findByTag(tag);
 	 }
 	 
