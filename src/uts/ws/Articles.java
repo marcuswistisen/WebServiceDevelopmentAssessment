@@ -13,19 +13,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Articles implements Serializable {
 	@XmlElement(name = "article")
 	private ArrayList<Article> list = new ArrayList<Article>();
-	
+
 	public ArrayList<Article> getList() {
         return list;
     }
-	
+
 	public void addArticle(Article article)throws JAXBException {
         list.add(article);  
     }
-	
+
 	public void removeArticle(Article article) {
         list.remove(article);
     }
-	
+
     public Article findById(int id) {
     	        for (Article article : list) {
     	            if (article.getId() == id)
@@ -43,5 +43,5 @@ public class Articles implements Serializable {
         }
         return tags;
     }
-	
+
 }

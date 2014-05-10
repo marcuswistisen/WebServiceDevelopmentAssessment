@@ -11,21 +11,21 @@ import javax.xml.bind.Unmarshaller;
 public class ArticleApplication {
 	private String filePath;
 	private Articles articles;
-	
+
 	public ArticleApplication() {
 		super();
 	}
-	
+
 	public ArticleApplication(String filePath, Articles articles) {
 		super();
 		this.filePath = filePath;
 		this.articles = articles;
 	}
-	
+
 	public String getFilePath() {
 		return filePath;
 	}
-	
+
 	public void setFilePath(String filePath) throws JAXBException, IOException {
 		this.filePath = filePath;
 		JAXBContext jc = JAXBContext.newInstance(Articles.class);
@@ -34,7 +34,7 @@ public class ArticleApplication {
 		articles = (Articles)u.unmarshal(fin);
 		fin.close();
 	}
-	
+
 	public void saveData(String filePath)throws JAXBException, IOException{
 		this.filePath = filePath;
 		JAXBContext jc = JAXBContext.newInstance(Articles.class);
@@ -44,7 +44,7 @@ public class ArticleApplication {
 		m.marshal(this.articles, fout); 
 		fout.close();
 	}
-		
+
 	public Articles getArticles() {
 		return articles;
 	}
