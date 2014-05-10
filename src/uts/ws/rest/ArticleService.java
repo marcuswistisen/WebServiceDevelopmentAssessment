@@ -23,7 +23,7 @@ public class ArticleService {
 	   ArticleApplication articleApp = (ArticleApplication)application.getAttribute("articleApp");
 	   if (articleApp == null) {
 	    articleApp = new ArticleApplication();
-	    articleApp.setFilePath(application.getRealPath("WEB-INF/articles.xml"));
+	    articleApp.setFilePath(application.getRealPath("/WEB-INF/articles.xml"));
 	    application.setAttribute("articleApp", articleApp);
 	   }
 	   return articleApp;
@@ -41,6 +41,7 @@ public class ArticleService {
 	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
+	 @XmlHeader("<?xml-stylesheet type=\"text/xsl\" href=\"articles.xsl\"?>")
 	 @XmlElementRef
 	 public ArrayList<Article> getArticles(@QueryParam("id") String tag) throws JAXBException, IOException{ 
 		 return getArticleApp().getArticles().findByTag(tag);
