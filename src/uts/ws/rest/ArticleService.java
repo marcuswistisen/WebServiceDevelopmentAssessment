@@ -6,6 +6,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
+import com.sun.jersey.api.provider.jaxb.XmlHeader;
+
 import uts.ws.*;
 
 import java.io.*;
@@ -30,7 +32,7 @@ public class ArticleService {
 
 	 @Path("article")
 	 @GET
-	 @Produces(MediaType.APPLICATION_XML) 
+	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
 	 public Article getArticles(@QueryParam("id") int id) throws JAXBException, IOException{
 		  return getArticleApp().getArticles().findById(id);
@@ -38,7 +40,7 @@ public class ArticleService {
 	 
 	 @Path("tag")
 	 @GET
-	 @Produces(MediaType.APPLICATION_XML) 
+	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
 	 public ArrayList<Article> getArticles(@QueryParam("id") String tag) throws JAXBException, IOException{ 
 		 return getArticleApp().getArticles().findByTag(tag);
