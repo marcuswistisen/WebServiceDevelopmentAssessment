@@ -10,7 +10,5 @@
         <email>john@news.news</email>
         <name>John Doh</name>
         <password>foobar</password>
-        <gender>male</gender>
-        <favouriteColour>yellow</favouriteColour>
     </user>
 </users>

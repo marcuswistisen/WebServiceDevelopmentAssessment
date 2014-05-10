@@ -7,24 +7,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <% String filePath = application.getRealPath("WEB-INF/users.xml"); %>
 <jsp:useBean id="userApp" class="uts.ws.UserApplication" scope="application">
-    <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
+   <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
 </jsp:useBean>
 <%
-String email = request.getParameter("email");
-String password = request.getParameter("password");
-Users users = userApp.getUsers();
-User user = users.login(email, password);
+String email = request.getParameter("log_username");
+String password = request.getParameter("log_password");
+User user = (User)(userApp.getUsers().login(email, password));
 
 if(user != null){
 %>
+<% session.setAttribute("user", user); %>
+<% response.sendRedirect("index.jsp?cat=all");%>
 <title>Login Successful</title>
 </head>
 <body> <p>Login successful. Click <a href="index.jsp">here</a> to return to the main page.</p>
 
-<% session.setAttribute("user", user); %>
+
 </body>
 
-<% }  else {%>
+<% }else{%>
 
 <title>Login Failed</title>
 </head>

@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
-    
+<%@ page import="uts.ws.User" %>
+<%
+	User user = (User)session.getAttribute("user");
+	boolean isLogged = false;
+	if(user!=null)
+	{
+		isLogged = true;
+	}
+%> 
  <%
  //this store all our categories
  //we loop through this array and print each one out in the nav menu
@@ -65,8 +73,19 @@
 			}
 		%>
 		</div>
-		<div id="login">
-			<form action="loginaction.jsp" method="POST">
+		<% 
+		if(isLogged)
+		{
+			out.println("Welcome, "+user.getEmail());
+			%>
+				<br/><a href="cpanel.jsp">Manage</a> | <a href="logout.jsp">Logout</a>
+			<%
+		}
+		else
+		{
+		%>
+			<div id="login">
+			<form action="login.jsp" method="POST">
 				<div id="log_label" class="log_label">LOGIN</div>
 				<label>Username : </label><br/>
 					<input id="log_input" type="text" name="log_username" /><br/>
@@ -75,6 +94,10 @@
 				<input type="submit" value="Login" id="log_submit"/>
 			</form>
 		</div>
+		<%
+		}
+		 %>
+		
 	</div>
 	<div id="right">
 		<div id="article_wrapper">
