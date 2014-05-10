@@ -14,7 +14,11 @@ import java.io.*;
 public class UserService {
 	@Context
 	 private ServletContext application;
+<<<<<<< HEAD
 
+=======
+	 
+>>>>>>> 3bc29b96ed8d363daeeb40dcfcdecf4a245670d5
 	 private UserApplication getUserApp() throws JAXBException, IOException {
 	  synchronized (application) {
 	   UserApplication userApp = (UserApplication)application.getAttribute("userApp");
@@ -34,5 +38,9 @@ public class UserService {
 	 public User getUsers(@QueryParam("email") String email) throws JAXBException, IOException{
 		  return getUserApp().getUsers().findByEmail(email);
 	 }
+<<<<<<< HEAD
 
+=======
+	 
+>>>>>>> 3bc29b96ed8d363daeeb40dcfcdecf4a245670d5
 }

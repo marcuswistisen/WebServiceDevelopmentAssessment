@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<users>
+    <user>
+        <email>jack@news.news</email>
+        <name>Jack Sparrow</name>
+        <password>foobar1</password>
+    </user>
+    <user>
+        <email>john@news.news</email>
+        <name>John Doh</name>
+        <password>foobar</password>
+        <gender>male</gender>
+        <favouriteColour>yellow</favouriteColour>
+    </user>
+</users>
