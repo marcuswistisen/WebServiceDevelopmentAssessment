@@ -1,6 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
     
+ <%
+ //this store all our categories
+ //we loop through this array and print each one out in the nav menu
+	String[] navItems = new String[6];
+	 navItems[0]="all";
+	 navItems[1]="sports";
+	 navItems[2]="games";
+	 navItems[3]="entertainment";
+	 navItems[4]="business";
+	 navItems[5]="politics";
+ 	
+	 String cat = "all";//if there are no params in url then it is set to default to all
+	 
+ 	if(request.getParameter("cat")!=null)//checks if the choosen category is not null
+ 	{
+ 		cat = request.getParameter("cat");//sets cat to the current category in url
+ 	}else{
+ 		response.sendRedirect("index.jsp?cat=all");//reloads index.jsp and sets category to all
+ 	}
+ %>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,36 +36,34 @@
 			NEWSAPP
 		</div>
 		<div id="nav">
-			<a href="?cat=all">
-			<div id="nav_item" class="nav_item" style="background : #5b5b5b">
-				ALL
-			</div>
-			</a>
-			<a href="?cat=sports">
-			<div id="nav_item" class="nav_item">
-				SPORTS
-			</div>
-			</a>
-			<a href="?cat=games">
-			<div id="nav_item" class="nav_item">
-				GAMES
-			</div>
-			</a>
-			<a href="?cat=entertainment">
-			<div id="nav_item" class="nav_item">
-				ENTERTAINMENT
-			</div>
-			</a>
-			<a href="?cat=business">
-			<div id="nav_item" class="nav_item">
-				BUSINESS
-			</div>
-			</a>
-			<a href="?cat=politics">
-			<div id="nav_item" class="nav_item">
-				POLITICS
-			</div>
-			</a>
+		<%
+		/**
+			Loop For the News Category menu
+		 */
+			for(int i=0;i<navItems.length;i++)
+			{
+				if(navItems[i].equals(cat))
+				{
+				%>
+				<a href="?cat=<%=navItems[i] %>">
+					<div id="nav_item" class="nav_item" style="background : #5b5b5b">
+						<%=navItems[i].toUpperCase()%>
+					</div>
+				</a>
+				<%
+				}
+				else
+				{
+				%>
+				<a href="?cat=<%=navItems[i] %>">
+					<div id="nav_item" class="nav_item">
+						<%=navItems[i].toUpperCase()%>
+					</div>
+				</a>
+				<%
+				}
+			}
+		%>
 		</div>
 		<div id="login">
 			<form action="#" method="POST">
