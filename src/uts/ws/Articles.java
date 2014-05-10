@@ -34,13 +34,14 @@ public class Articles implements Serializable {
     	 return null;
     	    }
     
-    public Article findByTag(String tag) {
+    public ArrayList<Article> findByTag(String tag) {
+    	ArrayList<Article> tags = new ArrayList<Article>();
         for (Article article : list) {
             if (article.getTag().equalsIgnoreCase(tag)){
-            	return article;
+            	tags.add(article);
             }
         }
-        return null;
+        return tags;
     }
 	
 }

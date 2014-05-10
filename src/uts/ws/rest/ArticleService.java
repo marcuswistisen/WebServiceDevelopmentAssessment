@@ -9,6 +9,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import uts.ws.*;
 
 import java.io.*;
+import java.util.ArrayList;
  
 @Path("/articles")
 public class ArticleService {
@@ -35,11 +36,11 @@ public class ArticleService {
 		  return getArticleApp().getArticles().findById(id);
 	 }
 	 
-	 @Path("tag")
+	 @Path("article")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML) 
 	 @XmlElementRef
-	 public Article getArticles(@QueryParam("id") String tag) throws JAXBException, IOException{ 
+	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag) throws JAXBException, IOException{ 
 		 return getArticleApp().getArticles().findByTag(tag);
 	 }
 	 
