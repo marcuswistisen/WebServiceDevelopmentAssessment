@@ -11,7 +11,9 @@ import com.sun.jersey.api.provider.jaxb.XmlHeader;
 import uts.ws.*;
 
 import java.io.*;
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
  
 @Path("/articles")
 public class ArticleService {
@@ -23,28 +25,27 @@ public class ArticleService {
 	   ArticleApplication articleApp = (ArticleApplication)application.getAttribute("articleApp");
 	   if (articleApp == null) {
 	    articleApp = new ArticleApplication();
-	    articleApp.setFilePath(application.getRealPath("/WEB-INF/articles.xml"));
+	    articleApp.setFilePath(application.getRealPath("WEB-INF/articles.xml"));
 	    application.setAttribute("articleApp", articleApp);
 	   }
 	   return articleApp;
 	  }
 	 }
-
 	 @Path("article")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
-	 public Article getArticles(@QueryParam("id") int id) throws JAXBException, IOException{
-		  return getArticleApp().getArticles().findById(id);
+	 public ArrayList<Article> getArticles(@QueryParam("id") int id, @QueryParam("tag") String tag) throws JAXBException, IOException{
+			 return getArticleApp().getArticles().findById(id);
+		 
 	 }
-	 
 	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
-	 @XmlHeader("<?xml-stylesheet type=\"text/xsl\" href=\"articles.xsl\"?>")
+	 //@XmlHeader("<?xml-stylesheet type='text/xsl' href='articles.xsl'?>")
 	 @XmlElementRef
-	 public ArrayList<Article> getArticles(@QueryParam("id") String tag) throws JAXBException, IOException{ 
-		 return getArticleApp().getArticles().findByTag(tag);
+	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag, @QueryParam("startDate") Date startDate, @QueryParam("endDate") Date endDate) throws JAXBException, IOException, ParseException{ 
+		 return getArticleApp().getArticles().findByTag(tag, startDate, endDate);
 	 }
 	 
 }

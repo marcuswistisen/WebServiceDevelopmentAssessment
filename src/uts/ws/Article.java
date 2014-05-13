@@ -1,6 +1,10 @@
 package uts.ws;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -59,8 +63,9 @@ public class Article implements Serializable{
 		this.tag = tag;
 	}
 
-	public String getDate() {
-		return date;
+	public Date getDate() throws ParseException {
+		Date datep = new SimpleDateFormat("MM/dd/yyyy").parse(date);
+		return datep;
 	}
 
 	public void setDate(String date) {
