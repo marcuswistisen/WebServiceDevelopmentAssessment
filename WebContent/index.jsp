@@ -142,6 +142,10 @@
 	<%
 	if (!id.equals("000")){
 	%>
+	<c:set var="ID" value="<%=id%>"/>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/article?id=${ID}" />
+	<c:import var="xslt" url="WEB-INF/articlefull.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
 	<%}%>
 	</div>
 </body>
