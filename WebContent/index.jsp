@@ -3,10 +3,6 @@
 <%@ page import="uts.ws.*" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
-<% String filePath = application.getRealPath("WEB-INF/articles.xml"); %>
-<jsp:useBean id="articleApp" class="uts.ws.ArticleApplication" scope="application">
-    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
-    </jsp:useBean>
 <%
 	User user = (User)session.getAttribute("user");
 	boolean isLogged = false;
@@ -16,6 +12,7 @@
 	}
 %> 
  <%
+ 
  //this store all our categories
  //we loop through this array and print each one out in the nav menu
 	String[] navItems = new String[6];
@@ -25,13 +22,16 @@
 	 navItems[3]="entertainment";
 	 navItems[4]="business";
 	 navItems[5]="politics";
- 	
+	 String id = "000";
 	 String cat = "all";//if there are no params in url then it is set to default to all
-	 
  	if(request.getParameter("cat")!=null)//checks if the choosen category is not null
  	{
  		cat = request.getParameter("cat");//sets cat to the current category in url
- 	}else{
+ 	}
+ 	else if(request.getParameter("id")!= null){
+		id = request.getParameter("id");
+	}
+ 	else{
  		response.sendRedirect("index.jsp?cat=all");//reloads index.jsp and sets category to all
  	}
  %>
@@ -105,37 +105,44 @@
 		 %>
 		
 	</div>
+<!-- 	Getting articles after category -->
 	<div id="right">
-	<% if (cat.equalsIgnoreCase("all")){ %>
+	<% if (cat.equalsIgnoreCase("all") && id.equals("000")){ %>
 	<c:import var="xml" url="WEB-INF/articles.xml" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("sports")){ %>
+	<% if (cat.equalsIgnoreCase("sports") && id.equals("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("games")){ %>
+	<% if (cat.equalsIgnoreCase("games") && id.equals("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=games" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("entairtainment")){ %>
+	<% if (cat.equalsIgnoreCase("entairtainment") && id.equals("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("business")){ %>
+	<% if (cat.equalsIgnoreCase("business") && id.equals("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=business" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("politics")){ %>
+	<% if (cat.equalsIgnoreCase("politics") && id.equals("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=politics" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
+	
+<!-- 	Getting a Article after ID -->
+	<%
+	if (!id.equals("000")){
+	%>
+	<%}%>
 	</div>
 </body>
 </html>
