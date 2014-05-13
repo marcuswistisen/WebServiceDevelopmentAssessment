@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-	<xsl:template match="articles/article">
+	<xsl:template match="article">
 	<html>
 <head>
 <title>News Page</title>
@@ -31,7 +31,12 @@
 					CATEGORY - <xsl:value-of select="tag"></xsl:value-of>
 				</div>
 				<div id="article_readmore" class="article_readmore">
-					<a href="#readmore">Read more</a>
+				
+				<xsl:variable name="ID" select="id" />
+					<a href="/WebServiceDevelopmentAssessment/index.jsp?id={$ID}">Read More	</a>
+<div id="test" border="600" align="center" style="display:none;"> 
+<p><xsl:value-of select="text"></xsl:value-of></p> 
+</div>
 				</div>
 			</div>
 		</div></body>

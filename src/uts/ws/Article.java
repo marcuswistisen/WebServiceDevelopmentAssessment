@@ -1,6 +1,10 @@
 package uts.ws;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -18,6 +22,8 @@ public class Article implements Serializable{
 	public String date;
 
 	public String title;
+	
+	public String previews;
 
 	public String text;
 
@@ -25,13 +31,14 @@ public class Article implements Serializable{
 		super();
 	}
 
-	public Article(int id, String author, String tag, String date, String title, String text) {
+	public Article(int id, String author, String tag, String date, String title, String previews, String text) {
 		super();
 		this.id = id;
 		this.author = author;
 		this.tag = tag;
 		this.date = date;
 		this.title = title;
+		this.previews = previews;
 		this.text = text;
 	}
 
@@ -59,8 +66,9 @@ public class Article implements Serializable{
 		this.tag = tag;
 	}
 
-	public String getDate() {
-		return date;
+	public Date getDate() throws ParseException {
+		Date datep = new SimpleDateFormat("MM/dd/yyyy").parse(date);
+		return datep;
 	}
 
 	public void setDate(String date) {
@@ -74,6 +82,14 @@ public class Article implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
+	public String getPreview() {
+		return previews;
+	}
+	
+	public void setPreview(String previews) {
+		this.previews = previews;
+	}
 
 	public String getText() {
 		return text;
@@ -83,12 +99,13 @@ public class Article implements Serializable{
 		this.text = text;
 	}
 
-	public void update(int id, String author, String tag, String date, String title, String text) {
+	public void update(int id, String author, String tag, String date, String title, String previews, String text) {
 		setId(id);
 		setAuthor(author);
 		setTag(tag);
 		setDate(date);
 		setTitle(title);
+		setPreview(previews);
 		setText(text);
 
 	}

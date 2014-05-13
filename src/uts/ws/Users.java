@@ -34,7 +34,6 @@ public class Users implements Serializable {
    
     public User findByEmail(String email) {
     	
-<<<<<<< HEAD
     	// For each user in the list...
         for (User user : list) {
             if (user.getEmail().equalsIgnoreCase(email))

@@ -1,7 +1,10 @@
 package uts.ws;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -26,22 +29,58 @@ public class Articles implements Serializable {
         list.remove(article);
     }
 
-    public Article findById(int id) {
-    	        for (Article article : list) {
+    public ArrayList<Article> findById(int id) {
+    		ArrayList<Article> articles = new ArrayList<Article>();
+    		for (Article article : list) {
     	            if (article.getId() == id)
-    	 return article;
+    	 articles.add(article);
     	        }
-    	 return null;
+    	 return articles;
     	    }
     
-    public ArrayList<Article> findByTag(String tag) {
+    public ArrayList<Article> findByTag(String tag, Date startDate, Date endDate) throws ParseException {
     	ArrayList<Article> tags = new ArrayList<Article>();
-        for (Article article : list) {
-            if (article.getTag().equalsIgnoreCase(tag)){
-            	tags.add(article);
-            }
+    	String noStartDateString = "11/11/1111";
+    	String noEndDateString = "11/11/2999";
+    	if(tag.equalsIgnoreCase(""))
+    		tag = "all";
+    	Date noStartDate = new SimpleDateFormat("MM/dd/yyyy").parse(noStartDateString);
+    	Date noEndDate = new SimpleDateFormat("MM/dd/yyyy").parse(noEndDateString);
+    	if(startDate == null)
+    		startDate = noStartDate;
+    	if(endDate == null)
+    		endDate = noEndDate;
+       
+    	for (Article article : list) {
+        	if (article.getDate().compareTo(startDate) >= 0 && startDate != noStartDate){
+        		if (article.getDate().compareTo(endDate) <=0 && endDate != noEndDate){
+        			if (article.getTag().equalsIgnoreCase(tag)){
+        				tags.add(article);
+        			}
+        			if(!article.getTag().equalsIgnoreCase(tag) && tag.equalsIgnoreCase("all")){
+        				tags.add(article);
+        				
+        			}
+        		}
+        		if(endDate == noEndDate){
+        			if (article.getTag().equalsIgnoreCase(tag))
+        				tags.add(article);
+        			if(!article.getTag().equalsIgnoreCase(tag) && tag.equalsIgnoreCase("all"))
+        				tags.add(article);
+        		}    
+        	}
+        	
+        	if (article.getDate().compareTo(endDate) <= 0 && endDate != noStartDate && startDate == noStartDate){
+        		
+        		if (article.getTag().equalsIgnoreCase(tag)){
+    				tags.add(article);
+    			}
+    			if(!article.getTag().equalsIgnoreCase(tag) && tag.equalsIgnoreCase("all")){
+    				tags.add(article);
+    				
+    			}
+        	}
         }
         return tags;
     }
-
 }
