@@ -22,6 +22,8 @@ public class Article implements Serializable{
 	public String date;
 
 	public String title;
+	
+	public String previews;
 
 	public String text;
 
@@ -29,13 +31,14 @@ public class Article implements Serializable{
 		super();
 	}
 
-	public Article(int id, String author, String tag, String date, String title, String text) {
+	public Article(int id, String author, String tag, String date, String title, String previews, String text) {
 		super();
 		this.id = id;
 		this.author = author;
 		this.tag = tag;
 		this.date = date;
 		this.title = title;
+		this.previews = previews;
 		this.text = text;
 	}
 
@@ -79,6 +82,14 @@ public class Article implements Serializable{
 	public void setTitle(String title) {
 		this.title = title;
 	}
+	
+	public String getPreview() {
+		return previews;
+	}
+	
+	public void setPreview(String previews) {
+		this.previews = previews;
+	}
 
 	public String getText() {
 		return text;
@@ -88,12 +99,13 @@ public class Article implements Serializable{
 		this.text = text;
 	}
 
-	public void update(int id, String author, String tag, String date, String title, String text) {
+	public void update(int id, String author, String tag, String date, String title, String previews, String text) {
 		setId(id);
 		setAuthor(author);
 		setTag(tag);
 		setDate(date);
 		setTitle(title);
+		setPreview(previews);
 		setText(text);
 
 	}

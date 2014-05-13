@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" %>
-<%@ page import="uts.ws.User" %>
+<%@ page import="uts.ws.*" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
+<% String filePath = application.getRealPath("WEB-INF/articles.xml"); %>
+<jsp:useBean id="articleApp" class="uts.ws.ArticleApplication" scope="application">
+    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
+    </jsp:useBean>
 <%
 	User user = (User)session.getAttribute("user");
 	boolean isLogged = false;
@@ -100,66 +106,36 @@
 		
 	</div>
 	<div id="right">
-		<div id="article_wrapper">
-			<div id="article_header">
-				<div id="article_title" class="article_title">
-					Article Title
-				</div>
-				<div id="article_author" class="author_name">
-					By Author Name
-				</div>
-				<div id="article_published" class="article_published">
-					02-02-2222
-				</div>
-			</div>
-			<div id="article_summary" class="article_summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Nam urna ante, facilisis scelerisque lacinia vitae, blandit bibendum ligula.
-				 Maecenas luctus venenatis sem, ac mattis erat porta sit amet. Pellentesque egestas orci eu mi dignissim,
-				  non commodo est accumsan. Ut congue arcu neque, a rutrum enim eleifend vitae. Aliquam lacinia velit
-				  sit amet nunc viverra, non consectetur dui pellentesque. Cras eu ipsum tempor sapien tristique semper.
-				  
-			</div>
-			<div id="article_footer">
-				<div id="article_category" class="article_category">
-					CATEGORY - blah
-				</div>
-				<div id="article_readmore" class="article_readmore">
-					<a href="#readmore">Read more</a>
-				</div>
-			</div>
-		</div>
-		
-		<div id="article_wrapper">
-			<div id="article_header">
-				<div id="article_title" class="article_title">
-					Article Title
-				</div>
-				<div id="article_author" class="author_name">
-					By Author Name
-				</div>
-				<div id="article_published" class="article_published">
-					02-02-2222
-				</div>
-			</div>
-			<div id="article_summary" class="article_summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-				Nam urna ante, facilisis scelerisque lacinia vitae, blandit bibendum ligula.
-				 Maecenas luctus venenatis sem, ac mattis erat porta sit amet. Pellentesque egestas orci eu mi dignissim,
-				  non commodo est accumsan. Ut congue arcu neque, a rutrum enim eleifend vitae. Aliquam lacinia velit
-				  sit amet nunc viverra, non consectetur dui pellentesque. Cras eu ipsum tempor sapien tristique semper.
-				  
-			</div>
-			<div id="article_footer">
-				<div id="article_category" class="article_category">
-					CATEGORY - blah
-				</div>
-				<div id="article_readmore" class="article_readmore">
-					<a href="#readmore">Read more</a>
-				</div>
-			</div>
-		</div>
-		
+	<% if (cat.equalsIgnoreCase("all")){ %>
+	<c:import var="xml" url="WEB-INF/articles.xml" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
+	<% if (cat.equalsIgnoreCase("sports")){ %>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
+	<% if (cat.equalsIgnoreCase("games")){ %>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=games" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
+	<% if (cat.equalsIgnoreCase("entairtainment")){ %>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
+	<% if (cat.equalsIgnoreCase("business")){ %>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=business" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
+	<% if (cat.equalsIgnoreCase("politics")){ %>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=politics" />
+	<c:import var="xslt" url="WEB-INF/articles.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<% }%>
 	</div>
 </body>
 </html>

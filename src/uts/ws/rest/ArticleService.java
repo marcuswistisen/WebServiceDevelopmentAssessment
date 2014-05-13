@@ -39,6 +39,7 @@ public class ArticleService {
 			 return getArticleApp().getArticles().findById(id);
 		 
 	 }
+	 //Give Parameters
 	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
