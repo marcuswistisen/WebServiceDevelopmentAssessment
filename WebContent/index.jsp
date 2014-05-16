@@ -25,6 +25,11 @@
 	 String cat = "all";//if there are no params in url then it is set to default to all
 	 String startDate = "11/11/1111";
 	 String endDate = "11/11/2099";
+	 String id = "000";
+
+	 if (request.getParameter("id")!= null){
+	 	id = request.getParameter("id");
+	 }
  	if(request.getParameter("cat")!= null && request.getParameter("startDate") == null && request.getParameter("endDate") == null)//checks if the choosen category is not null
  	{
  		cat = request.getParameter("cat");//sets cat to the current category in url
@@ -45,6 +50,10 @@
  			cat = request.getParameter("cat");
  		}
 			endDate = request.getParameter("endDate");
+ 	}
+ 	
+ 	else if (request.getParameter("id")!= null){
+ 		id = request.getParameter("id");
  	}
  	else{
  		response.sendRedirect("index.jsp?cat=all");//reloads index.jsp and sets category to all
@@ -122,32 +131,32 @@
 	</div>
 <!-- 	Getting articles after category -->
 	<div id="right">
-	<% if (cat.equalsIgnoreCase("all") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("all") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="WEB-INF/articles.xml" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("sport") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("sport") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("games") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("games") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=games" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("entairtainment") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("entairtainment") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("business") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("business") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=business" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("politics") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("politics") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=politics" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
@@ -166,6 +175,14 @@
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<%}}%>
+	
+	<%if (!id.equals("000")){
+	%>
+	<c:set var="ID" value="<%=id%>"/>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/article?id=${ID}" />
+	<c:import var="xslt" url="WEB-INF/articlefull.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<%}%>
 	</div>
 </body>
 </html>
