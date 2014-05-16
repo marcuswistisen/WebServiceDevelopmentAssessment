@@ -33,7 +33,7 @@
 				<div id="article_readmore" class="article_readmore">
 				
 				<xsl:variable name="ID" select="id" />
-					<a href="/WebServiceDevelopmentAssessment/index.jsp?id={$ID}">Read More	</a>
+					<a href="/WebServiceDevelopmentAssessment/readArticle.jsp?id={$ID}">Read More	</a>
 <div id="test" border="600" align="center" style="display:none;"> 
 <p><xsl:value-of select="text"></xsl:value-of></p> 
 </div>
