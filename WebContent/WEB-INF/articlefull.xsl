@@ -16,7 +16,7 @@
 					<xsl:value-of select="title"></xsl:value-of>
 				</div>
 				<div id="article_author" class="author_name">
-					By Author <xsl:value-of select="author"></xsl:value-of>
+					By <xsl:value-of select="author"></xsl:value-of>
 				</div>
 				<div id="article_published" class="article_published">
 					<xsl:value-of select="date"></xsl:value-of>

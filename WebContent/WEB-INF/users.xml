@@ -2,13 +2,39 @@
 
 <users>
     <user>
-        <email>jack@news.news</email>
+    	<name>John Doh</name>
+        <email>John.Doh@Johndoh.com</email>
         <name>Jack Sparrow</name>
         <password>foobar1</password>
+        <Biography>
+			John Doh have been working in sport journalism for many years
+			and started his career freelancing. After a few
+			successful articles earning a job at The News Page.
+		</Biography>
+		<dob>1/1/1956</dob>
+		
     </user>
-    <user>
-        <email>john@news.news</email>
-        <name>John Doh</name>
-        <password>foobar</password>
-    </user>
+   <user>
+   		<name>Scott What</name>
+   		<email>Scott.What@news.news</email>
+   		<password>foobar</password>
+		<Biography>
+			Scott What have been working in game journalism for many years
+			and started his career freelancing. After a few
+			successful articles earning a job at The News Page.
+		</Biography>
+		<dob>1/1/1980</dob>
+	</user>
+	
+	  <user>
+   	  	<name>Jack Sparrow</name>
+   	  	<email>John.Doh@Johndoh.com</email>
+   	  	<password>foobar2</password>
+		<Biography>
+			Jack Sparrow have been working in game journalism for many years
+			and started his career freelancing. After a few
+			successful articles earning a job at The News Page.
+		</Biography>
+		<dob>1/1/1956</dob>
+	</user>
 </users>

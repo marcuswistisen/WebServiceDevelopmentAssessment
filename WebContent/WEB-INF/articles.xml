@@ -23,7 +23,7 @@ Sed lobortis pharetra purus, ac posuere est pellentesque ut. Praesent tempus mal
     	<id>2</id>
     	<author>Jack Sparrow</author>
     	<tag>Games</tag>
-    	<date>01/02/2014</date>
+    	<date>01/04/2014</date>
     	<previews>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus massa, consequat vitae consequat ut, aliquam quis diam. Mauris feugiat condimentum gravida. Morbi ullamcorper est hendrerit sem iaculis fringilla. Vivamus neque odio, ullamcorper ut nunc ac, laoreet tincidunt ipsum. Phasellus dui urna, facilisis nec elementum sit amet, lobortis quis turpis. Fusce pretium feugiat quam, eu facilisis nisi scelerisque sed. Etiam et facilisis enim. Vivamus ut posuere nibh, non condimentum magna. Nunc eleifend rutrum orci, ut ultricies nunc vehicula in. Vestibulum at eros nisl. Sed convallis elit tincidunt dignissim tincidunt</previews>
     	<title>Tiger Telematics Back In Bussiness, Stefan Eriksson New CEO</title>
     	<text>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus massa, consequat vitae consequat ut, aliquam quis diam. Mauris feugiat condimentum gravida. Morbi ullamcorper est hendrerit sem iaculis fringilla. Vivamus neque odio, ullamcorper ut nunc ac, laoreet tincidunt ipsum. Phasellus dui urna, facilisis nec elementum sit amet, lobortis quis turpis. Fusce pretium feugiat quam, eu facilisis nisi scelerisque sed. Etiam et facilisis enim. Vivamus ut posuere nibh, non condimentum magna. Nunc eleifend rutrum orci, ut ultricies nunc vehicula in. Vestibulum at eros nisl. Sed convallis elit tincidunt dignissim tincidunt.
@@ -53,5 +53,23 @@ Maecenas sed massa faucibus, ultricies lorem non, ultrices quam. Morbi eget dolo
 Nulla tincidunt quis orci eget tristique. Nulla consequat, felis sit amet lacinia pharetra, augue quam euismod leo, sit amet faucibus neque purus fermentum magna. Sed condimentum, massa non tempus malesuada, ante augue euismod mauris, lacinia pulvinar nibh purus ac ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas mollis interdum sem, vitae laoreet nibh fermentum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas quam nunc, rutrum ut accumsan at, vulputate nec justo. Vivamus dignissim sit amet dui ut malesuada. Nullam sollicitudin semper aliquet. Aliquam cursus mattis dictum. In ornare porta ligula, eget interdum libero vestibulum eu. Nullam gravida enim a diam posuere, et pellentesque justo tincidunt. Nullam aliquet, nibh nec cursus vehicula, nulla tortor vestibulum eros, congue gravida massa est in nunc. Nam blandit id quam id fermentum.
 
 Donec felis arcu, venenatis volutpat suscipit at, dictum eu dolor. Sed pharetra velit et mauris tincidunt sollicitudin. Vivamus nec nisl vitae leo ultrices aliquet eu sed tortor. In feugiat semper metus. Aliquam erat volutpat. Donec vitae tortor turpis. Ut et tincidunt sapien, id porta risus. Morbi cursus felis at elit condimentum rhoncus</text>
+    </article>
+    
+        <article>
+    	<id>4</id>
+    	<author>Scott What</author>
+    	<tag>Business</tag>
+    	<date>11/10/2014</date>
+    	<previews>Phasellus in eros pharetra augue rhoncus auctor. Ut ultricies at elit at ultrices. In pharetra lobortis ante, consectetur condimentum mi elementum et. Cras molestie justo in lacus egestas, pulvinar rhoncus sapien fringilla. Phasellus sem metus, sodales quis porta non, scelerisque ut diam. Mauris aliquam velit laoreet cursus sagittis. Aliquam dapibus massa ante, eget convallis ipsum aliquet non. Curabitur metus neque, placerat tempor elementum id, fringilla sed nisl. In aliquet augue nec ante convallis, vel auctor nulla aliquet. Sed quam odio, placerat a nulla sed, sollicitudin ornare nulla</previews>
+    	<title>Everything crashes</title>
+    	<text> Phasellus in eros pharetra augue rhoncus auctor. Ut ultricies at elit at ultrices. In pharetra lobortis ante, consectetur condimentum mi elementum et. Cras molestie justo in lacus egestas, pulvinar rhoncus sapien fringilla. Phasellus sem metus, sodales quis porta non, scelerisque ut diam. Mauris aliquam velit laoreet cursus sagittis. Aliquam dapibus massa ante, eget convallis ipsum aliquet non. Curabitur metus neque, placerat tempor elementum id, fringilla sed nisl. In aliquet augue nec ante convallis, vel auctor nulla aliquet. Sed quam odio, placerat a nulla sed, sollicitudin ornare nulla.
+
+Aenean tincidunt metus id quam consequat, vel viverra lacus euismod. Aenean sed libero ipsum. Nam ornare sem ac purus tempus pretium. Proin ultricies pretium rhoncus. Curabitur dignissim diam urna, nec condimentum quam scelerisque non. Aenean sagittis velit vitae orci egestas placerat. Aenean quis nulla quis dui commodo aliquet. Ut id erat sed metus lobortis lobortis. Aenean vestibulum vehicula turpis vitae fringilla. Etiam pulvinar vestibulum quam sed tempus.
+
+Proin ultrices erat pharetra, aliquet orci eget, gravida odio. Pellentesque venenatis nulla eu turpis lacinia fermentum. Mauris massa dolor, tristique quis nibh sit amet, tempor fringilla turpis. In hac habitasse platea dictumst. Sed tincidunt ante et metus laoreet facilisis. Ut eget suscipit erat. Aliquam ac sapien est.
+
+Cras ultrices velit turpis, in auctor arcu tempor nec. Ut iaculis risus non risus laoreet elementum. Donec in justo hendrerit, sagittis enim vel, malesuada velit. Nullam odio dolor, convallis sit amet felis et, semper blandit velit. Vivamus vestibulum facilisis dolor, at sodales neque accumsan eget. Integer sit amet dictum tellus, sit amet tincidunt nisl. Morbi eu dui venenatis, bibendum mauris vel, varius justo. Nunc eleifend egestas dictum.
+
+Phasellus ac laoreet odio. Ut cursus, felis eget molestie aliquet, tellus est aliquam nisi, sit amet aliquet leo eros ut nulla. Donec et lectus a metus lacinia facilisis. Integer ac magna libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dignissim ipsum enim. Integer sed fermentum nibh. Nulla vel nisi hendrerit, egestas elit eu, pulvinar quam. Nunc pellentesque, lectus ut consequat euismod, lectus erat adipiscing nulla, quis consectetur lorem urna at nibh. Sed blandit tortor magna, sed tincidunt massa accumsan tincidunt. Vivamus a nisi nec orci adipiscing scelerisque. Morbi in egestas est. Proin faucibus pretium massa, eu elementum elit.</text>
     </article>
 </articles>
