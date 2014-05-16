@@ -12,6 +12,7 @@ import uts.ws.*;
 
 import java.io.*;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
  
@@ -43,9 +44,9 @@ public class ArticleService {
 	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
-	 //@XmlHeader("<?xml-stylesheet type='text/xsl' href='articles.xsl'?>")
 	 @XmlElementRef
-	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag, @QueryParam("startDate") Date startDate, @QueryParam("endDate") Date endDate) throws JAXBException, IOException, ParseException{ 
+	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag, @QueryParam("startDate") String startDate, @QueryParam("endDate") String endDate) throws JAXBException, IOException, ParseException{ 
+		 //startDate/endDate correct format parsing
 		 return getArticleApp().getArticles().findByTag(tag, startDate, endDate);
 	 }
 	 
