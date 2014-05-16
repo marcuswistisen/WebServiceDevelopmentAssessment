@@ -127,7 +127,7 @@
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("sports") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
+	<% if (cat.equalsIgnoreCase("sport") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099")){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
