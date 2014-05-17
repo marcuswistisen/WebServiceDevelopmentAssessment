@@ -36,7 +36,7 @@ public class ArticleService {
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
-	 public ArrayList<Article> getArticles(@QueryParam("id") int id, @QueryParam("tag") String tag) throws JAXBException, IOException{
+	 public ArrayList<Article> getArticles(@QueryParam("id") int id) throws JAXBException, IOException{
 			 return getArticleApp().getArticles().findById(id);
 		 
 	 }
@@ -46,7 +46,6 @@ public class ArticleService {
 	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
 	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag, @QueryParam("startDate") String startDate, @QueryParam("endDate") String endDate) throws JAXBException, IOException, ParseException{ 
-		 //startDate/endDate correct format parsing
 		 return getArticleApp().getArticles().findByTag(tag, startDate, endDate);
 	 }
 	 

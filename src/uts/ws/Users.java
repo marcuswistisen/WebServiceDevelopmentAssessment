@@ -40,7 +40,8 @@ public class Users implements Serializable {
             	return user; // Email has not been used. Return the user.
         }
         	return null; // Email has been used. Return a null user.
-    } 
+    }
+    
     	
 }
 

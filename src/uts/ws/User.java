@@ -1,27 +1,46 @@
 package uts.ws;
 
 import java.io.*;
+
 import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-
+@XmlRootElement(name = "user")
 public class User implements Serializable{
-	
-	@XmlElement(name="email")
+
 	private String email;
-	@XmlElement(name="name")
 	private String name;
-	@XmlElement(name="password")
 	private String password;
-	
-	public User(){}
-	
-	public User(String email,String name,String password) {
+	private String biography;
+	private String dob;
+	public User(){
+		super();
+	}
+
+	public User(String email, String name, String password, String biography, String dob) {
 		// TODO Auto-generated constructor stub
 		super();
 		this.email = email;
 		this.name = name;
 		this.password = password;
+		this.biography = biography;
+		this.dob = dob;
+	}
+
+	public String getBiography() {
+		return biography;
+	}
+
+	public void setBiography(String biography) {
+		this.biography = biography;
+	}
+
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
 	}
 
 	public String getEmail() {

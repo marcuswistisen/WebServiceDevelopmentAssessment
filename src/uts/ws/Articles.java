@@ -42,8 +42,6 @@ public class Articles implements Serializable {
     	ArrayList<Article> tags = new ArrayList<Article>();
     	String noStartDateStr = "01/01/1999";
     	String noEndDateStr = "11/11/2099";
-    	if(tag.equalsIgnoreCase(""))
-    		tag = "all";   	
     	Date noStartDate = new SimpleDateFormat("dd/MM/yyyy").parse(noStartDateStr);
     	Date noEndDate = new SimpleDateFormat("dd/MM/yyyy").parse(noEndDateStr);
     	Date startDate1 = noStartDate;
@@ -83,6 +81,11 @@ public class Articles implements Serializable {
     			}
 
         	}
+        	
+        	if(startDate1.equals(noStartDate) && endDate1.equals(noEndDate) && article.getTag().equalsIgnoreCase(tag)){
+        		tags.add(article);
+        	}
+        	
         	
         }
         return tags;

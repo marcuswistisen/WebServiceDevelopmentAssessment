@@ -20,7 +20,7 @@ package uts.ws.rest;
  	   UserApplication userApp = (UserApplication)application.getAttribute("userApp");
  	   if (userApp == null) {
  	    userApp = new UserApplication();
- 	    userApp.setFilePath(application.getRealPath("WEBINF/users.xml"));
+ 	    userApp.setFilePath(application.getRealPath("WEB-INF/users.xml"));
  	    application.setAttribute("userApp", userApp);
  	   }
  	   return userApp;
