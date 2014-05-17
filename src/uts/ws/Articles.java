@@ -29,15 +29,15 @@ public class Articles implements Serializable {
         list.remove(article);
     }
 
-    public ArrayList<Article> findById(int id) {
-    		ArrayList<Article> articles = new ArrayList<Article>();
+    public Article findById(int id) {
     		for (Article article : list) {
     	            if (article.getId() == id)
-    	 articles.add(article);
+    	 return article;
     	        }
-    	 return articles;
+			return null;
     	    }
     
+    //Searching by tag, Start Date and End Date
     public ArrayList<Article> findByTag(String tag, String startDate, String endDate) throws ParseException {
     	ArrayList<Article> tags = new ArrayList<Article>();
     	String noStartDateStr = "01/01/1999";

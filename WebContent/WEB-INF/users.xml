@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<?xml-stylesheet type="text/xsl" href="users.xsl"?>
 <users>
     <user>
     	<name>John Doh</name>
         <email>John.Doh@Johndoh.com</email>
-        <name>Jack Sparrow</name>
+        <name>John Doh</name>
         <password>foobar1</password>
         <biography>
 			John Doh have been working in sport journalism for many years
@@ -28,7 +28,7 @@
 	
 	  <user>
    	  	<name>Jack Sparrow</name>
-   	  	<email>John.Doh@Johndoh.com</email>
+   	  	<email>Jack.Sparrow@news.news</email>
    	  	<password>foobar2</password>
 		<biography>
 			Jack Sparrow have been working in game journalism for many years

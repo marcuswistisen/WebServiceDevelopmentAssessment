@@ -16,7 +16,8 @@
 					<xsl:value-of select="title"></xsl:value-of>
 				</div>
 				<div id="article_author" class="author_name">
-					By <xsl:value-of select="author"></xsl:value-of>
+				<xsl:variable name="NAME" select="author" />
+				<a href="/WebServiceDevelopmentAssessment/index.jsp?author={$NAME}">By <xsl:value-of select="author"></xsl:value-of></a>
 				</div>
 				<div id="article_published" class="article_published">
 					<xsl:value-of select="date"></xsl:value-of>

@@ -36,7 +36,7 @@ public class ArticleService {
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
-	 public ArrayList<Article> getArticles(@QueryParam("id") int id) throws JAXBException, IOException{
+	 public Article getArticles(@QueryParam("id") int id) throws JAXBException, IOException{
 			 return getArticleApp().getArticles().findById(id);
 		 
 	 }

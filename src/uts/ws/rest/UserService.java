@@ -35,4 +35,13 @@ package uts.ws.rest;
  		  return getUserApp().getUsers().findByEmail(email);
  	 }
  	 
+	 @Path("author")
+ 	 @GET
+ 	 @Produces(MediaType.APPLICATION_XML) 
+ 	 @XmlElementRef
+ 	 public User getAuthor(@QueryParam("name") String name) throws JAXBException, IOException{
+ 		  return getUserApp().getUsers().findByName(name);
+ 	 }
+ 	 
+ 	 
  }

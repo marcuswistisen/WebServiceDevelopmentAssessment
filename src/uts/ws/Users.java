@@ -42,6 +42,17 @@ public class Users implements Serializable {
         	return null; // Email has been used. Return a null user.
     }
     
+    public User findByName(String name) {
+    	
+    	// For each user in the list...
+        for (User user : list) {
+            if (user.getName().equalsIgnoreCase(name))
+            	return user; // Email has not been used. Return the user.
+        }
+        	return null; // Email has been used. Return a null user.
+    }
+    
+    
     	
 }
 

@@ -30,7 +30,7 @@
 	 if (request.getParameter("id")!= null){
 	 	id = request.getParameter("id");
 	 }
- 	if(request.getParameter("cat")!= null && request.getParameter("startDate") == null && request.getParameter("endDate") == null)//checks if the choosen category is not null
+ 	if(request.getParameter("cat")!= null && request.getParameter("startDate") == null && request.getParameter("endDate") == null && request.getParameter("author") == null)//checks if the choosen category is not null
  	{
  		cat = request.getParameter("cat");//sets cat to the current category in url
  	}
@@ -135,32 +135,32 @@
 	</div>
 <!-- 	Getting articles after category -->
 	<div id="right">
-	<% if (cat.equalsIgnoreCase("all") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("all") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="WEB-INF/articles.xml" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("sport") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("sport") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=sport&startDate=&endDate=" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("games") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("games") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=games&startDate=&endDate=" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("entairtainment") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("entairtainment") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=entairtainment&startDate=&endDate=" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("business") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("business") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=business&startDate=&endDate=" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<% }%>
-	<% if (cat.equalsIgnoreCase("politics") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000")){ %>
+	<% if (cat.equalsIgnoreCase("politics") && startDate.equalsIgnoreCase("11/11/1111") && endDate.equalsIgnoreCase("11/11/2099") && id.equalsIgnoreCase("000") && author == null){ %>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/tag?tag=politics&startDate=&endDate=" />
 	<c:import var="xslt" url="WEB-INF/articles.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
@@ -168,7 +168,7 @@
 	
 <!-- 	Filter search category, startDate and endDate -->
 
-	<%
+	<%	
 	for(int i = 0; i < navItems.length; i++){
 	if (!startDate.equals("11/11/1111") && cat.equalsIgnoreCase(navItems[i].toString()) || !endDate.equalsIgnoreCase("11/11/2099") && cat.equals(navItems[i].toString())){
 	%>
@@ -180,11 +180,22 @@
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<%}}%>
 	
+<!-- 	Get fullArticle -->
 	<%if (!id.equals("000")){
 	%>
 	<c:set var="ID" value="<%=id%>"/>
 	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/articles/article?id=${ID}" />
 	<c:import var="xslt" url="WEB-INF/articlefull.xsl" />
+	<x:transform xml="${xml}" xslt="${xslt}" />
+	<%}%>
+	
+<!-- 	Get Author XML -->
+	<%if (author != null){
+		author = author.replaceAll("\\s","%20");
+	%>
+	<c:set var="AUTHOR" value="<%=author%>"/>
+	<c:import var="xml" url="http://localhost:8080/WebServiceDevelopmentAssessment/rest/users/author?name=${AUTHOR}" />
+	<c:import var="xslt" url="WEB-INF/users.xsl" />
 	<x:transform xml="${xml}" xslt="${xslt}" />
 	<%}%>
 	
