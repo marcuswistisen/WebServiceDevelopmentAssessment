@@ -2,6 +2,7 @@ package uts.ws;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -47,6 +48,10 @@ public class ArticleApplication {
 
 	public Articles getArticles() {
 		return articles;
+	}
+	
+	public ArrayList<Article> getArticleList() {
+		return articles.getList();
 	}
 
 	public void setArticles(Articles articles) {

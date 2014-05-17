@@ -20,7 +20,7 @@ package uts.ws.rest;
  	   UserApplication userApp = (UserApplication)application.getAttribute("userApp");
  	   if (userApp == null) {
  	    userApp = new UserApplication();
- 	    userApp.setFilePath(application.getRealPath("WEBINF/users.xml"));
+ 	    userApp.setFilePath(application.getRealPath("WEB-INF/users.xml"));
  	    application.setAttribute("userApp", userApp);
  	   }
  	   return userApp;
@@ -34,5 +34,14 @@ package uts.ws.rest;
  	 public User getUsers(@QueryParam("email") String email) throws JAXBException, IOException{
  		  return getUserApp().getUsers().findByEmail(email);
  	 }
+ 	 
+	 @Path("author")
+ 	 @GET
+ 	 @Produces(MediaType.APPLICATION_XML) 
+ 	 @XmlElementRef
+ 	 public User getAuthor(@QueryParam("name") String name) throws JAXBException, IOException{
+ 		  return getUserApp().getUsers().findByName(name);
+ 	 }
+ 	 
  	 
  }

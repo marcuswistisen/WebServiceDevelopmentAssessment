@@ -67,7 +67,7 @@ public class Article implements Serializable{
 	}
 
 	public Date getDate() throws ParseException {
-		Date datep = new SimpleDateFormat("MM/dd/yyyy").parse(date);
+		Date datep = new SimpleDateFormat("dd/MM/yyyy").parse(date);
 		return datep;
 	}
 
