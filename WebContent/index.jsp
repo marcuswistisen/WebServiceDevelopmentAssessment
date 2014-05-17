@@ -200,5 +200,20 @@
 	<%}%>
 	
 	</div>
+	
+	<div id="filters">
+		<div id="f_title">
+			Filters
+		</div>
+		<div id="f_filters">
+		<form action="index.jsp" method="get">
+			<label>Start date </label><br/>
+			<input type="text" id="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" name="startDate"><br/>
+			<label>End date : </label><br/>
+			<input type="text" id="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" name="endDate"><br/>
+			<input type="submit" value="Filter" id="f_button"/>
+		</form>
+		</div>
+	</div>
 </body>
 </html>

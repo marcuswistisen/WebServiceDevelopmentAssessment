@@ -8,6 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/cpanel.css" media="screen"/> 
 <title>Insert title here</title>
 </head>
 <body>

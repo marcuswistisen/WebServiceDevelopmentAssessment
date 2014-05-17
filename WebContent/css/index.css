@@ -134,6 +134,16 @@ body
 	width : 250px;
 }
 
+#article_author > a, #article_author > a:visited
+{
+	color : #3d3d3d;
+	text-decoration : underline;
+}
+#article_author > a:hover
+{
+	color : black;
+}
+
 #article_header > #article_published
 {
 	position : absolute;
@@ -175,6 +185,64 @@ body
 	width : 80px;
 	height : 20px;
 	right : 5px;
+}
+
+#filters
+{
+	position : fixed;
+	top : 10px;
+	left : 910px;
+	width : 160px;
+	height : 190px;
+}
+
+#f_title
+{
+	position : relative;
+	width : 150px;
+	height : 30px;
+	padding : 5px;
+	background : #5b5b5b;
+	font-size : 1.5em;
+	text-align : center;
+	color : #eaeaea;
+}
+
+#f_filters
+{
+	position : relative;
+	width : 150px;
+	height : 140px;
+	padding : 5px;
+	background : white;
+}
+
+#date
+{
+	width : 140px;
+	text-align : center;
+	height : 30px;
+	font-size : 1.1em;
+}
+
+#f_button
+{
+	width : 100px;
+	height : 30px;
+	margin-top : 5px;
+	margin-left : 25px;
+	border-radius : 15px;
+	font-size : 1.2em;
+	border : none;
+	color : #5b5b5b;
+	transition : 1s background,color ;
+}
+
+#f_button:hover
+{
+	cursor : pointer;
+	background : #5b5b5b;
+	color : black;
 }
 
 /* 
