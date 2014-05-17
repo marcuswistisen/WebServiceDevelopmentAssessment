@@ -93,10 +93,9 @@ body
 	position : absolute;
 	width : 700px;
 	min-height : 500px;
-	height : 700px;
+	height : 600px;
 	max-height : 50000px;
 	left : 200px;
-	background : white;
 	margin-bottom : 10px;
 }
 
@@ -176,4 +175,50 @@ body
 	width : 80px;
 	height : 20px;
 	right : 5px;
+}
+
+/* 
+****AUTHOR IDS
+*/
+
+#author_content
+{
+	position : absolute;
+	top : 20px;
+	left : 20px;
+	width : 600px;
+	min-height : 200px;
+}
+
+#author_name
+{
+	position :	relative;
+	width : 590px;
+	height : 38px;
+	font-size : 1.5em; 
+	border-bottom : 2px solid #444444;
+	padding-top : 10px;
+	padding-left : 10px;
+	background : #198dd1;
+}
+
+#author_dob
+{
+	position : relative;
+	width : 550px;
+	height : 20px;
+	font-size : 1em;
+	padding-left : 50px;
+	background : #777777;
+}
+
+#author_bio
+{
+	position : relative;
+	width : 580px;
+	min-height : 100px;
+	padding-left : 10px;
+	padding-right : 10px;
+	background : #b2b2b2;
+	border-bottom : 2px solid #444444;
 }
