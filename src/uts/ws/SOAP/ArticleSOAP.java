@@ -22,15 +22,15 @@ public class ArticleSOAP {
 			ArticleApplication articleApp = (ArticleApplication)application.getAttribute("articleApp");
 	    if (articleApp == null) {
 	    	articleApp = new ArticleApplication();
-	    	articleApp.setFilePath(application.getRealPath("articles.xml"));
+	    	articleApp.setFilePath(application.getRealPath("WEB-INF/articles.xml"));
 	    	application.setAttribute("articleApp", articleApp);
 	   }
 	   return articleApp;
-	}
+		}
 	}
 	
-	public ArrayList<Article> fetchArticles() throws JAXBException, IOException{
-		return getArticleApp().getArticleList();
+	public Articles fetchArticles() throws JAXBException, IOException{
+		return getArticleApp().getArticles();
 	}
 	
 	public void removeArticle(int id) throws JAXBException, IOException{

@@ -10,9 +10,11 @@
 <link type="text/css" rel="stylesheet" href="css/index_class.css" media="screen"/>
 </head>
 <body>
-<p><xsl:value-of select="name"></xsl:value-of></p>
-<p>Date Of Birth: <xsl:value-of select="dob"></xsl:value-of></p>
-<p> <xsl:value-of select="biography"></xsl:value-of></p>
+	<div id="author_content">
+		<div id="author_name"><xsl:value-of select="name"></xsl:value-of></div>
+		<div id="author_dob">Born in <xsl:value-of select="dob"></xsl:value-of></div>
+		<div id="author_bio"> <xsl:value-of select="biography"></xsl:value-of></div>
+	</div>
 </body>
 </html>
 	</xsl:template>
