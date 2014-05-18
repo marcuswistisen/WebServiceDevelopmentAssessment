@@ -27,6 +27,16 @@
 %>
 		You are logged in as <%=user.getName()%> < <%=user.getEmail()%> ><br/>
 		<a href="index.jsp?cat=all">Index</a> | <a href="logout.jsp">Logout</a>
+		
+		Please enter a Title:
+		<INPUT TYPE="TEXT" NAME="text1">
+		<textarea name="paragraph_text" cols="50" rows="10"></textarea>
+		<FORM ACTION="" METHOD="POST">
+
+<BR>
+<INPUT TYPE="SUBMIT" value="Submit">
+<% out.println(request.getParameter("text1")); %>
+		
 <%
 	}
 %>

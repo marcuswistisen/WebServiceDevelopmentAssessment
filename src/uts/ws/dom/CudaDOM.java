@@ -19,6 +19,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
  //CUDA commands to delete, add or modify XML
+ //Used http://www.journaldev.com/901/how-to-edit-xml-file-in-java-dom-parser as source
 public class CudaDOM {
  
     public static void main(String[] args) {
@@ -79,13 +80,14 @@ public class CudaDOM {
     public static void deleteElement(Document doc, String id) {
         NodeList articles = doc.getElementsByTagName("article");
         Element e = null;
-        //loop for each employee
+
         for(int i=0; i<articles.getLength();i++){
         	e = (Element)articles.item(i);
             if(e.getElementsByTagName("id").item(0).getTextContent().equals(id))
             	e.getParentNode().removeChild(e);
             
         }
+        //Update Id Values
         updateIdValue(doc);
          
     }
@@ -93,7 +95,7 @@ public class CudaDOM {
     private static void updateIdValue(Document doc) {
     	NodeList articles = doc.getElementsByTagName("article");
         Element e = null;
-        //loop for each employee
+
         for(int i=0; i<articles.getLength();i++){
         	e = (Element)articles.item(i);
             Node ids = e.getElementsByTagName("id").item(0);

@@ -32,10 +32,9 @@
 					CATEGORY - <xsl:value-of select="tag"></xsl:value-of>
 				</div>
 				<div id="article_readmore" class="article_readmore">
-				<xsl:template match="student">
-	<xsl:variable name="ID"><xsl:value-of select="@id"/></xsl:variable>
+
+					<xsl:variable name="ID"><xsl:value-of select="id"/></xsl:variable>
 					<a href="/WebServiceDevelopmentAssessment/index.jsp?id={$ID}">Read More	</a>
-					</xsl:template>
 <div id="test" border="600" align="center" style="display:none;"> 
 <p><xsl:value-of select="text"></xsl:value-of></p> 
 </div>

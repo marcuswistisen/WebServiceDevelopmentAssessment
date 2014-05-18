@@ -121,7 +121,7 @@
 			<div id="login">
 			<form action="login.jsp" method="POST">
 				<div id="log_label" class="log_label">LOGIN</div>
-				<label>Username : </label><br/>
+				<label>Email : </label><br/>
 					<input id="log_input" type="text" name="log_username" /><br/>
 				<label>Password : </label><br/>
 					<input id="log_input" type="password" name="log_password"/><br/>
