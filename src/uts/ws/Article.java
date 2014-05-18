@@ -6,9 +6,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+import com.sun.xml.internal.txw2.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "article")
 public class Article implements Serializable{
@@ -33,7 +37,7 @@ public class Article implements Serializable{
 
 	public Article(int id, String author, String tag, String date, String title, String previews, String text) {
 		super();
-		this.id = id;
+		this.id = 1;
 		this.author = author;
 		this.tag = tag;
 		this.date = date;

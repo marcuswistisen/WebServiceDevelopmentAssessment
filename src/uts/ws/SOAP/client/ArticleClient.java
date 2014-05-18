@@ -1,7 +1,11 @@
 package uts.ws.SOAP.client;
 import java.rmi.RemoteException;
 import java.util.Scanner;
+
 import javax.xml.rpc.ServiceException;
+
+import uts.ws.ArticleApplication;
+import uts.ws.dom.CudaDOM;
 public class ArticleClient {
 	 public static void main(String[] args) throws ServiceException, RemoteException {
 
@@ -22,8 +26,7 @@ public class ArticleClient {
 			  
 			  if (input == 'd'){
 				  System.out.print("ID: ");
-				  char id = in.nextLine().charAt(0);
-				  articleSOAP.removeArticle(id);
+				  new CudaDOM();
 				  System.out.print("Article Deleted" + "\n" + "Choice: ");
 			  }
 			  
