@@ -112,7 +112,7 @@
 		{
 			out.println("Welcome, "+user.getEmail());
 			%>
-				<br/><a href="cpanel.jsp">Manage</a> | <a href="logout.jsp">Logout</a>
+				<br/><a href="cpanel.jsp?action=view">Manage</a> | <a href="logout.jsp">Logout</a>
 			<%
 		}
 		else
@@ -211,6 +211,15 @@
 			<input type="text" id="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" name="startDate"><br/>
 			<label>End date : </label><br/>
 			<input type="text" id="date" placeholder="dd/mm/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}" name="endDate"><br/>
+			<label>Category : </label><br/>
+			<select name="cat" id="cat">
+				<option name="all">All</option>
+				<option name="sport">Sport</option>
+				<option name="games">Games</option>
+				<option name="entertainment">Entertainment</option>
+				<option name="business">Business</option>
+				<option name="politics">Politics</option>
+			</select><br/>
 			<input type="submit" value="Filter" id="f_button"/>
 		</form>
 		</div>

@@ -193,7 +193,7 @@ body
 	top : 10px;
 	left : 910px;
 	width : 160px;
-	height : 190px;
+	height : 250px;
 }
 
 #f_title
@@ -212,9 +212,17 @@ body
 {
 	position : relative;
 	width : 150px;
-	height : 140px;
+	height : 200px;
 	padding : 5px;
 	background : white;
+}
+
+#cat
+{
+	width : 140px;
+	text-align : center;
+	height : 30px;
+	font-size : 1.1em;
 }
 
 #date
