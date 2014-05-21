@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="articles.xsl"?>
-<articles>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="articles.xsl"?><articles>
     <article>
     	<id>1</id>
     	<author>John Doh</author>
@@ -37,26 +36,10 @@ Sed hendrerit, ipsum a mollis luctus, mauris elit varius justo, eu bibendum mass
 Vestibulum nisl lacus, auctor dignissim turpis ac, feugiat imperdiet lacus. Phasellus tempus sit amet ipsum id varius. Proin pretium dolor erat, et pretium nisl pellentesque et. Sed id tellus orci. Aliquam at lacus id sem accumsan vehicula. Sed suscipit lorem ut augue condimentum malesuada. Sed blandit, nunc et consectetur molestie, nisl nunc porttitor magna, sed pellentesque turpis nunc eu elit. Ut rhoncus elementum urna, sit amet ornare tortor congue ut. Ut vel est non lorem volutpat consectetur. Vivamus eu congue mauris.</text>
     </article>
     
-    <article>
-    	<id>3</id>
-    	<author>John Doh</author>
-    	<tag>Sport</tag>
-    	<date>11/09/2014</date>
-    	<previews>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis vestibulum velit. Cras euismod facilisis semper. Vivamus vel metus porttitor mauris pellentesque adipiscing eget ut tellus. Duis blandit erat erat, sed interdum nisi molestie vel. Cras dui odio, pharetra nec auctor sed, viverra a nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis metus sed ipsum varius fringilla. Cras eu blandit nunc. Morbi in magna vitae quam auctor luctus</previews>
-    	<title>Something Lose League</title>
-    	<text> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sagittis vestibulum velit. Cras euismod facilisis semper. Vivamus vel metus porttitor mauris pellentesque adipiscing eget ut tellus. Duis blandit erat erat, sed interdum nisi molestie vel. Cras dui odio, pharetra nec auctor sed, viverra a nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc quis metus sed ipsum varius fringilla. Cras eu blandit nunc. Morbi in magna vitae quam auctor luctus.
-
-Cras ultricies ac mi eget hendrerit. Integer posuere cursus risus, eu tristique velit blandit ut. Praesent ac lacinia dui. Pellentesque sit amet sagittis nisl. Pellentesque imperdiet viverra lacus. Quisque aliquam mauris id ante luctus venenatis quis vitae mi. Maecenas ornare commodo malesuada. Etiam et purus quis sem commodo mollis nec et lacus. Aenean euismod, dolor eget volutpat malesuada, nulla urna euismod lorem, quis sollicitudin nibh purus in risus. Phasellus auctor felis in sem mollis molestie. Praesent laoreet quam nec sapien hendrerit, quis tempor ligula placerat. Suspendisse vulputate massa purus, id ultricies urna dapibus nec. Aliquam aliquam pharetra congue. Praesent varius quis est id eleifend. Nulla in tristique metus.
-
-Maecenas sed massa faucibus, ultricies lorem non, ultrices quam. Morbi eget dolor leo. Donec porta, leo eget pellentesque facilisis, massa lacus fringilla elit, et commodo est ante quis arcu. Integer semper eu nunc sed tincidunt. Vestibulum suscipit sapien et ante laoreet, varius semper nulla vestibulum. Vivamus id urna vitae leo congue hendrerit. Donec nec sollicitudin neque. Proin mollis, mi vitae tempus accumsan, dolor orci laoreet elit, eget accumsan leo felis ut nunc. Nullam pulvinar convallis diam, id gravida nulla vulputate eget. Pellentesque ut accumsan odio. Donec viverra nisl nec libero fermentum, at imperdiet lacus volutpat. Donec vestibulum mi et interdum blandit.
-
-Nulla tincidunt quis orci eget tristique. Nulla consequat, felis sit amet lacinia pharetra, augue quam euismod leo, sit amet faucibus neque purus fermentum magna. Sed condimentum, massa non tempus malesuada, ante augue euismod mauris, lacinia pulvinar nibh purus ac ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas mollis interdum sem, vitae laoreet nibh fermentum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas quam nunc, rutrum ut accumsan at, vulputate nec justo. Vivamus dignissim sit amet dui ut malesuada. Nullam sollicitudin semper aliquet. Aliquam cursus mattis dictum. In ornare porta ligula, eget interdum libero vestibulum eu. Nullam gravida enim a diam posuere, et pellentesque justo tincidunt. Nullam aliquet, nibh nec cursus vehicula, nulla tortor vestibulum eros, congue gravida massa est in nunc. Nam blandit id quam id fermentum.
-
-Donec felis arcu, venenatis volutpat suscipit at, dictum eu dolor. Sed pharetra velit et mauris tincidunt sollicitudin. Vivamus nec nisl vitae leo ultrices aliquet eu sed tortor. In feugiat semper metus. Aliquam erat volutpat. Donec vitae tortor turpis. Ut et tincidunt sapien, id porta risus. Morbi cursus felis at elit condimentum rhoncus</text>
-    </article>
+    
     
         <article>
-    	<id>4</id>
+    	<id>3</id>
     	<author>Scott What</author>
     	<tag>Business</tag>
     	<date>11/10/2014</date>

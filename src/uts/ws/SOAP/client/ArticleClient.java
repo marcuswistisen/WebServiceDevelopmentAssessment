@@ -1,13 +1,20 @@
 package uts.ws.SOAP.client;
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.Scanner;
 
+import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.rpc.ServiceException;
+import javax.xml.transform.TransformerException;
+
+import org.xml.sax.SAXException;
 
 import uts.ws.ArticleApplication;
+import uts.ws.Articles;
 import uts.ws.dom.CudaDOM;
 public class ArticleClient {
-	 public static void main(String[] args) throws ServiceException, RemoteException {
+	 public static void main(String[] args) throws ServiceException, TransformerException, ParserConfigurationException, SAXException, IOException, JAXBException {
 
 		  ArticleSOAPServiceLocator locator = new ArticleSOAPServiceLocator();
 		  ArticleSOAP articleSOAP = locator.getArticleSOAPPort();
@@ -26,7 +33,8 @@ public class ArticleClient {
 			  
 			  if (input == 'd'){
 				  System.out.print("ID: ");
-				  new CudaDOM();
+				  String idIn = in.nextLine();
+				  CudaDOM.deleteElement(idIn);
 				  System.out.print("Article Deleted" + "\n" + "Choice: ");
 			  }
 			  
@@ -36,5 +44,6 @@ public class ArticleClient {
 		  }
 		  
 	 }
+	 
 }
 
