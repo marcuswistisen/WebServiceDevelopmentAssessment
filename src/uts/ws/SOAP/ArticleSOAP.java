@@ -5,11 +5,20 @@ import java.util.ArrayList;
 import javax.annotation.Resource;
 import javax.jws.WebService;
 import javax.xml.bind.JAXBException;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
 import javax.xml.ws.handler.MessageContext;
 import javax.servlet.ServletContext;
 import javax.xml.ws.WebServiceContext;
 
+import uts.ws.ArticleApplication;
+import uts.ws.Articles;
+import uts.ws.dom.CudaDOM;
+
+import org.xml.sax.SAXException;
+
 import uts.ws.*;
+
 
 @WebService
 public class ArticleSOAP {
@@ -36,11 +45,8 @@ public class ArticleSOAP {
 	public void removeArticle(int id) throws JAXBException, IOException{
 		Article article = getArticleApp().getArticles().findById(id);
 		getArticleApp().getArticles().removeArticle(article);
-	}
-	
-	public void addArticle(int id, String author, String tag, String date, String title, String previews, String text) throws JAXBException, IOException{
-		Article article = new Article(id, author, tag, date, title, previews, text);
-		getArticleApp().getArticles().addArticle(article);
+		String filePath = getArticleApp().getFilePath();
+		getArticleApp().saveData(filePath);
 	}
 
 }

@@ -32,9 +32,12 @@ public class ArticleClient {
 			  }
 			  
 			  if (input == 'd'){
+				  String idIn = "";
 				  System.out.print("ID: ");
-				  String idIn = in.nextLine();
+				  idIn = in.nextLine();
+				  int id = Integer.parseInt(idIn);	
 				  CudaDOM.deleteElement(idIn);
+				  articleSOAP.removeArticle(id);
 				  System.out.print("Article Deleted" + "\n" + "Choice: ");
 			  }
 			  

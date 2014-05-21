@@ -14,6 +14,10 @@
  		<jsp:useBean id="articleApp" class="uts.ws.ArticleApplication" scope="application">
 	    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
 	    </jsp:useBean>
+	    
+	    <jsp:useBean id="articleApp2" class="uts.ws.SOAP.ArticleSOAP" scope="application">
+	    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
+	    </jsp:useBean>
 	    <%
 		String author = request.getParameter("author");
 		String title = request.getParameter("title");
