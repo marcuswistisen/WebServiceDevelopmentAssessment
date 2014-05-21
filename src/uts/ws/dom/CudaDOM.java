@@ -38,7 +38,6 @@ public class CudaDOM {
             StreamResult result = new StreamResult(new File(filePath));
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
-            System.out.println("XML file updated successfully");
     	}
     	
     public static void addArticle(String newFilePath, String author, String tag, String title, String text) throws ParserConfigurationException, SAXException, IOException, TransformerException {

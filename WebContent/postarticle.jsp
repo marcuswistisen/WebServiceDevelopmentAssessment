@@ -20,7 +20,8 @@
 		String tag = request.getParameter("cat");
 		String text = request.getParameter("fulltext");
 		CudaDOM.addArticle(filePath, author, tag, title, text);
-		articleApp.saveData(filePath);
+		articleApp.setFilePath(filePath);
+		response.sendRedirect("index.jsp");
 	 %>
 </body>
 </html>
