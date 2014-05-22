@@ -10,22 +10,19 @@
 </head>
 <body>
 <%
- 		String filePath = application.getRealPath("WEB-INF/articles.xml");%>
+ 		String filePath = application.getRealPath("WEB-INF/articles.xml"); //Get articles.xml on server%> 
  		<jsp:useBean id="articleApp" class="uts.ws.ArticleApplication" scope="application">
 	    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
 	    </jsp:useBean>
-	    
-	    <jsp:useBean id="articleApp2" class="uts.ws.SOAP.ArticleSOAP" scope="application">
-	    <jsp:setProperty name="articleApp" property="filePath" value="<%=filePath%>"/>
-	    </jsp:useBean>
 	    <%
+	    //Get all needed parameters
 		String author = request.getParameter("author");
 		String title = request.getParameter("title");
 		String tag = request.getParameter("cat");
 		String text = request.getParameter("fulltext");
-		CudaDOM.addArticle(filePath, author, tag, title, text);
-		articleApp.setFilePath(filePath);
-		response.sendRedirect("index.jsp");
+		CudaDOM.addArticle(filePath, author, tag, title, text); //add article to xml using DOM
+		articleApp.setFilePath(filePath); //Update filepath
+		response.sendRedirect("index.jsp"); // reDirect to index
 	 %>
 </body>
 </html>

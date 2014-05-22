@@ -26,10 +26,10 @@ import org.xml.sax.SAXException;
 import uts.ws.ArticleApplication;
 import uts.ws.*;
 import uts.ws.SOAP.client.Article;
- //CUDA commands to delete, add or modify XML
- //Used http://www.journaldev.com/901/how-to-edit-xml-file-in-java-dom-parser as source
+ //CUDA commands to delete, modify and add to XML
+ //Used some code from http://www.journaldev.com/901/how-to-edit-xml-file-in-java-dom-parser
 public class CudaDOM {
-    
+    	//XML writer
     	private static void write(Document doc, String filePath) throws TransformerException{
     		doc.getDocumentElement().normalize();
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
@@ -41,10 +41,10 @@ public class CudaDOM {
     	}
     	
     public static void addArticle(String newFilePath, String author, String tag, String title, String text) throws ParserConfigurationException, SAXException, IOException, TransformerException {
-    	
+    	//Add article
     	String filePath = newFilePath;
         File xmlFile = new File(filePath);
-        System.out.println(xmlFile.getPath());
+        //System.out.println(xmlFile.getPath());
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;
         dBuilder = dbFactory.newDocumentBuilder();
@@ -52,17 +52,17 @@ public class CudaDOM {
         doc.getDocumentElement().normalize();
         
         Element root = doc.getDocumentElement();
-        root.appendChild(getArticle(doc, author, tag, title, text));
+        root.appendChild(getArticle(doc, author, tag, title, text)); //create root child
         write(doc, filePath);
     
     }
-    
+    //Create elements
     private static Node getArticle(Document doc, String author, String tag, String title, String text){
     	Element article = doc.createElement("article");
     	NodeList articles = doc.getElementsByTagName("article");
         Element e = null;
         String id = "";
-        for(int i=0; i<articles.getLength();i++){
+        for(int i=0; i<articles.getLength();i++){ //get correct ID value
         	e = (Element)articles.item(i);
             Node ids = e.getElementsByTagName("id").item(0);
             int id1 = Integer.parseInt(ids.getTextContent());
@@ -72,7 +72,7 @@ public class CudaDOM {
         String previews;
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Date date = new Date();
-        String todaysDate = dateFormat.format(date).toString();
+        String todaysDate = dateFormat.format(date).toString(); //use todays date
         if (text.length() > 320)
         	previews = text.substring(0,320);
         else
@@ -108,7 +108,7 @@ public class CudaDOM {
         node.appendChild(doc.createTextNode(value));
         return node;
     }
-    
+    //Delete Element or nod
     public static void deleteElement(String idIn) throws TransformerException, ParserConfigurationException, SAXException, IOException {
     	String filePath = "WebContent/WEB-INF/articles.xml";
         File xmlFile = new File(filePath);
@@ -127,11 +127,11 @@ public class CudaDOM {
             	e.getParentNode().removeChild(e);
             
         }
-        updateIdValue(doc);
+        updateIdValue(doc); //update id
         write(doc, filePath);
          
     }
- 
+    //Modify id value to be correct after delete
     private static void updateIdValue(Document doc) {
     	NodeList articles = doc.getElementsByTagName("article");
         Element e = null;
@@ -140,7 +140,7 @@ public class CudaDOM {
         	e = (Element)articles.item(i);
             Node ids = e.getElementsByTagName("id").item(0);
             int id = Integer.parseInt(ids.getTextContent());
-            if(id != i+1)
+            if(id != i+1) //id should always be equal to i + 1
             ids.setTextContent("" + (i+1));
         }
     }

@@ -10,6 +10,7 @@
 <link type="text/css" rel="stylesheet" href="css/index_class.css" media="screen"/>
 </head>
 <body>
+<!-- 		XSL get title, date, name etc etc  -->
 		<div id="article_wrapper">
 			<div id="article_header">
 				<div id="article_title" class="article_title">

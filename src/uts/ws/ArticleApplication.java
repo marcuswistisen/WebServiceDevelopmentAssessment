@@ -26,7 +26,7 @@ public class ArticleApplication {
 	public String getFilePath() {
 		return filePath;
 	}
-
+//set current file path
 	public void setFilePath(String filePath) throws JAXBException, IOException {
 		this.filePath = filePath;
 		JAXBContext jc = JAXBContext.newInstance(Articles.class);
@@ -35,7 +35,7 @@ public class ArticleApplication {
 		articles = (Articles)u.unmarshal(fin);
 		fin.close();
 	}
-
+//save to xml
 	public void saveData(String filePath)throws JAXBException, IOException{
 		this.filePath = filePath;
 		JAXBContext jc = JAXBContext.newInstance(Articles.class);
@@ -49,7 +49,7 @@ public class ArticleApplication {
 	public Articles getArticles() {
 		return articles;
 	}
-	
+	//get  all articles as ArrayList
 	public ArrayList<Article> getArticleList() {
 		return articles.getList();
 	}
