@@ -20,7 +20,7 @@ import java.util.Date;
 public class ArticleService {
 	@Context
 	 private ServletContext application;
-	 
+	 //ArticleApplication
 	 private ArticleApplication getArticleApp() throws JAXBException, IOException {
 	  synchronized (application) {
 	   ArticleApplication articleApp = (ArticleApplication)application.getAttribute("articleApp");
@@ -32,6 +32,7 @@ public class ArticleService {
 	   return articleApp;
 	  }
 	 }
+	 //Get full article by id
 	 @Path("article")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
@@ -40,13 +41,13 @@ public class ArticleService {
 			 return getArticleApp().getArticles().findById(id);
 		 
 	 }
-	 //Give Parameters
+	 //Search
 	 @Path("tag")
 	 @GET
 	 @Produces(MediaType.APPLICATION_XML)
 	 @XmlElementRef
 	 public ArrayList<Article> getArticles(@QueryParam("tag") String tag, @QueryParam("startDate") String startDate, @QueryParam("endDate") String endDate) throws JAXBException, IOException, ParseException{ 
-		 return getArticleApp().getArticles().findByTag(tag, startDate, endDate);
+		 return getArticleApp().getArticles().findByTag(tag, startDate, endDate); //return ArrayList of search results
 	 }
 	 
 }

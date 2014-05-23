@@ -10,6 +10,7 @@
 <link type="text/css" rel="stylesheet" href="css/index_class.css" media="screen"/>
 </head>
 <body>
+<!-- 		XSL get title, date, name etc etc  -->
 		<div id="article_wrapper">
 			<div id="article_header">
 				<div id="article_title" class="article_title">
@@ -29,11 +30,11 @@
 			</div>
 			<div id="article_footer">
 				<div id="article_category" class="article_category">
-					CATEGORY - <xsl:value-of select="tag"></xsl:value-of>
+					<xsl:value-of select="tag"></xsl:value-of>
 				</div>
 				<div id="article_readmore" class="article_readmore">
-				
-				<xsl:variable name="ID" select="id" />
+
+					<xsl:variable name="ID"><xsl:value-of select="id"/></xsl:variable>
 					<a href="/WebServiceDevelopmentAssessment/index.jsp?id={$ID}">Read More	</a>
 <div id="test" border="600" align="center" style="display:none;"> 
 <p><xsl:value-of select="text"></xsl:value-of></p> 

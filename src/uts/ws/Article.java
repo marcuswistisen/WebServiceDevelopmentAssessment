@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -30,10 +28,10 @@ public class Article implements Serializable{
 	public Article(){
 		super();
 	}
-
+//Create Article
 	public Article(int id, String author, String tag, String date, String title, String previews, String text) {
 		super();
-		this.id = id;
+		this.id = 1;
 		this.author = author;
 		this.tag = tag;
 		this.date = date;
@@ -65,7 +63,7 @@ public class Article implements Serializable{
 	public void setTag(String tag) {
 		this.tag = tag;
 	}
-
+//Create date
 	public Date getDate() throws ParseException {
 		Date datep = new SimpleDateFormat("dd/MM/yyyy").parse(date);
 		return datep;
@@ -98,7 +96,7 @@ public class Article implements Serializable{
 	public void setText(String text) {
 		this.text = text;
 	}
-
+	//Update an article
 	public void update(int id, String author, String tag, String date, String title, String previews, String text) {
 		setId(id);
 		setAuthor(author);

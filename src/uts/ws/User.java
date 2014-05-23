@@ -4,10 +4,10 @@ import java.io.*;
 
 import javax.xml.bind.annotation.*;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "user")
+@XmlAccessorType(XmlAccessType.FIELD) 
+@XmlRootElement(name = "user") //xml root element
 public class User implements Serializable{
-
+//The user
 	private String email;
 	private String name;
 	private String password;
