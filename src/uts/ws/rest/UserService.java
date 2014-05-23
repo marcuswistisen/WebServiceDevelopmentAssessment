@@ -26,7 +26,7 @@ package uts.ws.rest;
  	   return userApp;
  	  }
  	 }
- 
+ 	 //Get user by Email
  	 @Path("user")
  	 @GET
  	 @Produces(MediaType.APPLICATION_XML) 
@@ -34,7 +34,7 @@ package uts.ws.rest;
  	 public User getUsers(@QueryParam("email") String email) throws JAXBException, IOException{
  		  return getUserApp().getUsers().findByEmail(email);
  	 }
- 	 
+ 	 //Get author linking articles.xml to users.xml, i.e. articles.name = users.name
 	 @Path("author")
  	 @GET
  	 @Produces(MediaType.APPLICATION_XML) 

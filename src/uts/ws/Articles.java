@@ -16,7 +16,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Articles implements Serializable {
 	@XmlElement(name = "article")
 	private ArrayList<Article> list = new ArrayList<Article>();
-
 	public ArrayList<Article> getList() {
         return list;
     }
@@ -33,11 +32,12 @@ public class Articles implements Serializable {
     		for (Article article : list) {
     	            if (article.getId() == id)
     	 return article;
+    			
     	        }
 			return null;
     	    }
-    
-    //Searching by tag, Start Date and End Date
+
+	//Searching by tag, Start Date and End Date
     public ArrayList<Article> findByTag(String tag, String startDate, String endDate) throws ParseException {
     	ArrayList<Article> tags = new ArrayList<Article>();
     	String noStartDateStr = "01/01/1999";
