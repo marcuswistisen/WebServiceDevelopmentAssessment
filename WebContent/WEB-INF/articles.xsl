@@ -30,7 +30,7 @@
 			</div>
 			<div id="article_footer">
 				<div id="article_category" class="article_category">
-					CATEGORY - <xsl:value-of select="tag"></xsl:value-of>
+					<xsl:value-of select="tag"></xsl:value-of>
 				</div>
 				<div id="article_readmore" class="article_readmore">
 

@@ -8,8 +8,8 @@
 	String[] views = new String[4];
 	views[0]="posts";
 	views[1]="create";
-	views[2]="update";
-	views[2]="edit";
+	views[2]="delete";
+	views[3]="edit";
 	String view = "posts";
 	boolean found = false;
 	if(request.getParameter("view")==null)
@@ -22,8 +22,17 @@
 			if(views[i].equals(view))
 			{
 				found = true;
+				view = views[i];
 				break;
 			}
+		}
+	}
+	
+	if(found)
+	{
+		if(view.equals(views[2]))//delete
+		{
+			String id;//which article to delete
 		}
 	}
 %>
@@ -41,18 +50,27 @@
 			Cpanel
 		</div>
 		<div id="actions">
-			
+			<div id="welcome">
+				Welcome,<br/>
+				<b><%=user.getName()%></b>
+			</div>
+			<div id="btns">
+				<ul>
+					<a href="cpanel.jsp?view=posts"><li>Posts</li></a>
+					<a href="index.jsp?cat=all"><li>Home</li></a>
+					<a href="logout.jsp"><li>Logout</li></a>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
+
 <div id="content">
-	<div id="cPost">
-	CREATE
-		<form action="cpanel.jsp" action="post">
-		
-		</form>
-		</div>
+	<div id="c_head">
+	
 	</div>
+</div>
+<!-- 
 <%boolean lipsum = false; %>
 <div id="content">
 	<div id="cPost">
@@ -95,6 +113,7 @@ if (autolipsum.checked == 0){
 		</form>
 	</div>
 </div>
+ -->
 <%
 	if(user==null)
 	{
