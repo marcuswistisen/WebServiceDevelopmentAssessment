@@ -109,8 +109,8 @@ public class CudaDOM {
         return node;
     }
     //Delete Element or nod
-    public static void deleteElement(String idIn) throws TransformerException, ParserConfigurationException, SAXException, IOException {
-    	String filePath = "WebContent/WEB-INF/articles.xml";
+    public static void deleteElement(String idIn, String fpath) throws TransformerException, ParserConfigurationException, SAXException, IOException {
+    	String filePath = fpath;
         File xmlFile = new File(filePath);
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder;

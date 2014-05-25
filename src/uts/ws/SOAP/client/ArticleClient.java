@@ -39,7 +39,7 @@ public class ArticleClient {
 				  System.out.print("ID: ");
 				  idIn = in.nextLine();
 				  int id = Integer.parseInt(idIn); // String to int to use with articleSOAP
-				  CudaDOM.deleteElement(idIn); //Delete article from local .xml
+				  CudaDOM.deleteElement(idIn, "WebContent/WEB-INF/articles.xml"); //Delete article from local .xml
 				  articleSOAP.removeArticle(id); //remove article from server .xml
 				  System.out.print("Article Deleted" + "\n" + "Choice: ");
 			  }
