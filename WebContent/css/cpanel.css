@@ -4,6 +4,7 @@ body
 	padding : 0px;
 	background : #dddddd;
 	font-family : sans-serif;
+	overflow-x : hidden;
 }
 
 #header_wrapper
@@ -11,7 +12,7 @@ body
 	position : relative;
 	width : 100%;
 	height : 51px;
-	background : black;
+	background : #595959;
 	border : 1px solid gray;
 }
 
@@ -20,7 +21,7 @@ body
 	position : relative;
 	width : 1000px;
 	height : 50px;
-	background : red;
+	background : #595959;
 	margin : 0 auto;
 }
 
@@ -31,7 +32,6 @@ body
 	top : 0px;
 	height : 45px;/* total height = 45 + 5 = 50px */
 	width : 195px;/* total width =195+5=200 */
-	background : cyan;
 	color : #eaeaea;
 	font-size : 2em;
 	padding-top : 5px;
@@ -46,7 +46,67 @@ body
 	width : 800px;
 	height : 50px;
 	top : 0px;
-	background : blue;
+}
+
+#actions > #welcome
+{
+	position : absolute;
+	left : 400px;
+	min-width : 75px;
+	max-width : 100px;
+	height : 40px;/*50px*/
+	top : 0px;
+	color : #79aff7;
+	font-size : 0.8em;
+	text-align : center;
+	padding-top : 10px;
+}
+
+#actions > #btns
+{
+	position : absolute;
+	left : 500px;
+	width : 300px;
+	height : 50px;
+}
+
+#btns > ul
+{
+	list-style : none;
+	width : 300px;
+	margin : 0px;
+	padding : 0px;
+	height : 40px;
+	padding-top : 5px;
+}
+
+#btns > ul > a
+{
+	text-decoration : none;
+	color : white;
+}
+
+#btns > ul > a > li
+{
+	width : 90px;
+	height : 32px;
+	text-align : center;
+	font-size : 1.2em;
+	padding-top : 8px;
+	float : left;
+	border-left : 5px solid white;
+	margin-right : 5px;
+	transition : 0.5s all ease-in-out;
+	background: linear-gradient(to right, white 50%, #595959 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+
+}
+
+#btns > ul > a > li:hover
+{
+	background-position : left bottom;
+	color : black;
 }
 
 #content
@@ -55,5 +115,123 @@ body
 	width : 800px;
 	min-height : 400px;
 	margin : 0 auto;
-	background : green;
+	background : #f2f2f2;
+}
+
+#c_head
+{
+	position : relative;
+	width : 800px;
+	height : 30px;/*35px*/
+	top : 5px;
+}
+
+#c_head > #c_head_title
+{
+	position : absolute;
+	width : 600px;
+	height : 25px;
+	border-left : 10px solid #79aff7;
+	left : 0px;
+	top : 0px;
+	padding-left : 10px;
+	padding-top : 5px;
+	font-weight : bold;
+	color : #79aff7;
+}
+
+#c_head_title > a
+{
+	text-decoration : none;
+}
+
+#create
+{
+	position : absolute;
+	width : 120px;
+	height : 25px;
+	text-align : center;
+	padding-top : 5px;
+	background : white;
+	right : 10px;
+	top : 0px;
+	color: #595959;
+	font-weight : bold;
+	transition : all ease-in-out 0.3s;
+}
+
+#create:hover
+{
+	background : #79AFF7;
+	color : white;
+}
+
+#c_body
+{
+	position : relative;
+	width : 600px;
+	min-height : 300px;
+	left : 10px;
+	margin-top : 10px;
+	padding-bottom : 10px;
+}
+
+#a_post
+{
+	position : relative;
+	width : 600px;
+	height : 40px;
+	background : #dadada;
+	top : 5px;
+	margin-top : 5px;
+}
+
+#a_title
+{
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	width : 495px;
+	height : 35px;
+	padding-top : 5px;
+	padding-left : 5px;
+	font-weight : bold;
+	font-size : 1.2em;
+}
+
+#options
+{
+	position : absolute;
+	left : 500px;
+	height : 40px;
+}
+
+#options > ul
+{
+	margin : 0px;
+	padding : 0px;
+	list-style : none;
+}
+
+#options > ul > a
+{
+	text-decoration : none;
+	color : white;
+}
+
+#options > ul > a > li
+{
+	float : right;
+	width : 50px;
+	height : 30px;
+	font-size : 0.9em;
+	text-align : center;
+	padding-top : 10px;
+	transition : 0.3s all ease-in-out;
+	background: #595959;
+}
+
+#options > ul > a > li:hover
+{
+	background : #79AFF7;
 }

@@ -4,15 +4,9 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
-
-import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-
-import com.sun.xml.internal.txw2.annotation.XmlAttribute;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "article")
 public class Article implements Serializable{

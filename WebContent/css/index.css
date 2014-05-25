@@ -30,7 +30,6 @@ body
 	position : relative;
 	width : 200px;
 	height : 300px;
-	background : red;
 }
 
 #nav > a
@@ -40,7 +39,8 @@ body
 
 #nav > a:hover > #nav_item
 {
-	background : #5b5b5b;
+	background-position : left bottom;
+	color : black;
 }
 
 #nav_item
@@ -48,8 +48,73 @@ body
 	position : relative;
 	width : 180px;
 	height : 30px;
-	background : #898989;
 	padding : 10px;
+	transition : 0.3s all ease-in-out;
+	background: linear-gradient(to right, #5b5b5b 50%, #898989 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+#welcomemsg
+{
+	position : relative;
+	width : 200px;
+	height : 150px;
+}
+
+#welcometitle
+{
+	position : relative;
+	width : 200px;
+	height : 50px;
+	background : yellow;
+	font-size : 1.1em;
+	text-align : center;
+}
+
+#welcomenav
+{
+	position : relative;
+	width : 200px;
+	height : 100px;
+}
+
+#welcomenav > ul
+{
+	margin : 0px;
+	padding: 0px;
+	list-style : none;
+}
+
+#welcomenav > ul > a
+{
+	text-decoration : none;
+	color: white;
+	font-size : 1.1em;
+}
+
+#welcomenav > ul > a:hover
+{
+	
+}
+
+#welcomenav > ul > a > li
+{
+	width : 195px;
+	height : 30px;
+	background : green;
+	padding-top: 10px;
+	padding-left : 5px;
+	transition : 0.5s all ease-in-out;
+	background: linear-gradient(to right, white 50%, #595959 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+#welcomenav > ul > a > li:hover
+{
+	background-position : left bottom;
+	color : black;
 }
 
 #login
