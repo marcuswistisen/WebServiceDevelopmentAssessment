@@ -116,7 +116,7 @@
 				<div id="welcometitle">Welcome,<br/><b><%=user.getName()%></b></div>
 				<div id="welcomenav">
 					<ul>
-						<a href="cpanel.jsp?view=posts"><li>Control Panel</li></a>
+						<a href="cpanel.jsp?action=posts"><li>Control Panel</li></a>
 						<a href="logout.jsp"><li>Logout</li></a>
 					</ul>
 				</div>

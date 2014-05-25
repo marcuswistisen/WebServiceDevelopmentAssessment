@@ -3,13 +3,6 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template match="article">
-	<html>
-<head>
-<title>News Page</title>
-<link type="text/css" rel="stylesheet" href="css/index.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/index_class.css" media="screen"/>
-</head>
-<body>
 <!-- 		XSL get title, date, name etc etc  -->
 		<div id="article_wrapper">
 			<div id="article_header">
@@ -41,7 +34,6 @@
 </div>
 				</div>
 			</div>
-		</div></body>
-</html>
+		</div>
 	</xsl:template>
 	</xsl:stylesheet> 

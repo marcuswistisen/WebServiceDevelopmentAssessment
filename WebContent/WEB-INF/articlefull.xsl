@@ -3,13 +3,6 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 	<xsl:template match="article">
-	<html>
-<head>
-<title>News Page</title>
-<link type="text/css" rel="stylesheet" href="css/index.css" media="screen"/>
-<link type="text/css" rel="stylesheet" href="css/index_class.css" media="screen"/>
-</head>
-<body>
 		<div id="article_wrapper">
 			<div id="article_header">
 				<div id="article_title" class="article_title">
@@ -38,9 +31,8 @@
 <div id="test" border="600" align="center" style="display:none;"> 
 <p><xsl:value-of select="text"></xsl:value-of></p> 
 </div>
-				</div>
-			</div>
-		</div></body>
-</html>
+		</div>
+	</div>
+</div>
 	</xsl:template>
 	</xsl:stylesheet> 
