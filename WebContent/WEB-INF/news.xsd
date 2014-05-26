@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="/index.jsp"
+	xmlns="/index.jsp"
+	elementFormDefault="qualified">
+	
+	<xs:simpleType name="dateType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-3][0-9]/[0-1][0-9]/[0-9]{4}"/> <!-- date read as DD/MM/YYYY -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="genderType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Male|Female|Other"/> <!-- gender is one of these options. -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="passwordType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9._\-]{3,55}"/> <!-- password must contain 3 to 55 characters -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="emailType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Za-z0-9\.\_\%\+\-]+@[A-Za-z0-9\.\-]+\.[A-Za-z]{2, 4}"/> <!-- emails contain "@" and ".com" -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z][a-z]*[\s[A-Z][A-Za-z]*]+"/> <!-- Full Names are encouraged -->
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="articles">
+		<xs:complexType>
+			<xs:sequence>	
+				<xs:element name="article">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="title" type="xs:string"/>
+							<xs:element name="author" type="nameType"/>
+							<xs:element name="date" type="dateType"/>
+							<xs:element name="preview" type="xs:string"/>
+							<xs:element name="text" type="xs:string"/>
+							<xs:element name="tag" type="xs:string"/>
+							<xs:element name="id" type="xs:integer"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="users">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="email" type="emailType"/>
+							<xs:element name="password" type="passwordType"/>
+							<xs:element name="author" type="emailType"/>
+							<xs:element name="gender" type="genderType"/>
+							<xs:element name="dob" type="dateType"/>
+							<xs:element name="biography" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
