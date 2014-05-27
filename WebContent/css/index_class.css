@@ -1,0 +1,75 @@
+.appname
+{
+	font-size : 2em;
+	color : white;
+	font-weight : bold;
+}
+
+.nav_item
+{
+	font-size : 1.3em;
+	color : white;
+}
+
+.log_label
+{
+	font-size : 1.1em;
+}
+/**
+ * ARTICLE BOX SPECIFIC CSS CLASSES
+ */
+
+.article_title
+{
+	font-size : 1.1em;
+	font-weight : bold;
+	color : #3d3d3d;
+}
+
+.article_published
+{
+	font-size : 0.8em;
+	color : #3d3d3d;
+}
+
+.author_name
+{
+	font-size : 0.9em;
+	color : #3d3d3d;
+}
+
+.article_summary
+{
+	font-size : 0.8em;
+	color : #444444;
+}
+
+.article_category
+{
+	font-size : 0.9em;
+	color : #7f7f7f;
+	font-weight : bold;
+}
+
+.article_readmore
+{
+	font-size : 0.8em;
+}
+
+#article_footer > #article_readmore > a
+{
+	text-decoration : none;
+	color : white;
+}
+
+#article_footer > #article_readmore > a:visited
+{
+	text-decoration : none;
+	color : white;
+}
+
+#article_footer > #article_readmore > a:hover
+{
+	text-decoration : underline;
+	color : #d6d6d6;
+}

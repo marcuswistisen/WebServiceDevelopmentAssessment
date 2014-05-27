@@ -1,0 +1,365 @@
+body
+{
+	margin : 0px;
+	padding : 0px;
+	background : #dddddd;
+	font-family : sans-serif;
+}
+
+#left
+{
+	position : fixed;
+	width : 200px;
+	height : 500px;
+	left : 0px;
+	background : #5b5b5b;
+}
+
+#appname
+{
+	position : relative;
+	width : 180px;
+	height : 30px;
+	background : #40a8e8;
+	padding : 10px;
+}
+
+
+#nav
+{
+	position : relative;
+	width : 200px;
+	height : 300px;
+}
+
+#nav > a
+{
+	text-decoration : none;
+}
+
+#nav > a:hover > #nav_item
+{
+	background-position : left bottom;
+	color : black;
+}
+
+#nav_item
+{
+	position : relative;
+	width : 180px;
+	height : 30px;
+	padding : 10px;
+	transition : 0.3s all ease-in-out;
+	background: linear-gradient(to right, #5b5b5b 50%, #898989 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+#welcomemsg
+{
+	position : relative;
+	width : 200px;
+	height : 150px;
+}
+
+#welcometitle
+{
+	position : relative;
+	width : 200px;
+	height : 50px;
+	background : yellow;
+	font-size : 1.1em;
+	text-align : center;
+}
+
+#welcomenav
+{
+	position : relative;
+	width : 200px;
+	height : 100px;
+}
+
+#welcomenav > ul
+{
+	margin : 0px;
+	padding: 0px;
+	list-style : none;
+}
+
+#welcomenav > ul > a
+{
+	text-decoration : none;
+	color: white;
+	font-size : 1.1em;
+}
+
+#welcomenav > ul > a:hover
+{
+	
+}
+
+#welcomenav > ul > a > li
+{
+	width : 195px;
+	height : 30px;
+	background : green;
+	padding-top: 10px;
+	padding-left : 5px;
+	transition : 0.5s all ease-in-out;
+	background: linear-gradient(to right, white 50%, #595959 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+#welcomenav > ul > a > li:hover
+{
+	background-position : left bottom;
+	color : black;
+}
+
+#login
+{
+	position : relative;
+	width : 200px;
+	height : 150px;
+	background : #40a8e8;
+}
+
+#log_label
+{
+	position : relative;
+	width : 190px;
+	height : 20px;
+	padding : 5px;
+	text-align : center;
+}
+
+#log_input
+{
+	width : 182px;
+	height : 16px;
+	margin-left : 5px;
+	padding : 2px;
+	border : 1px solid black;
+}
+
+
+#log_submit
+{
+	width : 75px;
+	height : 25px;
+	border : 1px solid black;
+	margin-top : 5px;
+	margin-left : 5px;
+}
+
+#right
+{
+	position : absolute;
+	width : 700px;
+	min-height : 500px;
+	height : 600px;
+	max-height : 50000px;
+	left : 200px;
+	margin-bottom : 10px;
+}
+
+#article_wrapper
+{
+	position : relative;
+	margin-bottom : 10px;
+	width : 700px;
+	min-height : 100px;
+	background : red;
+}
+
+#article_header
+{
+	position : relative;
+	width : 690px;
+	height : 19px;
+	background : #40A8E8;
+	padding : 5px;
+	border-bottom : 1px solid #2281b7;
+}
+
+#article_header > #article_title
+{
+	position : absolute;
+	left : 5px;
+	width : 350px;
+	height : 20px;
+}
+
+#article_header > #article_author
+{
+	position : absolute;
+	left : 355px;
+	height : 20px;
+	width : 250px;
+}
+
+#article_author > a, #article_author > a:visited
+{
+	color : #3d3d3d;
+	text-decoration : underline;
+}
+#article_author > a:hover
+{
+	color : black;
+}
+
+#article_header > #article_published
+{
+	position : absolute;
+	right : 5px;
+	height : 20px;
+	width : 90px;
+}
+
+#article_summary
+{
+	position : relative;
+	width : 690px;
+	min-height : 59px;
+	padding : 5px;
+	background : #88c1e2;
+	border-bottom : 1px solid #2281b7;
+}
+
+#article_footer
+{
+	position : relative;
+	width : 690px;
+	min-height : 20px;
+	padding : 5px;
+	background : #40A8E8;
+}
+
+#article_footer > #article_category
+{
+	position : absolute;
+	width : 600px;
+	height : 20px;
+	left : 5px;
+}
+
+#article_footer > #article_readmore
+{
+	position : absolute;
+	width : 80px;
+	height : 20px;
+	right : 5px;
+}
+
+#filters
+{
+	position : fixed;
+	top : 10px;
+	left : 910px;
+	width : 160px;
+	height : 250px;
+}
+
+#f_title
+{
+	position : relative;
+	width : 150px;
+	height : 30px;
+	padding : 5px;
+	background : #5b5b5b;
+	font-size : 1.5em;
+	text-align : center;
+	color : #eaeaea;
+}
+
+#f_filters
+{
+	position : relative;
+	width : 150px;
+	height : 200px;
+	padding : 5px;
+	background : white;
+}
+
+#cat
+{
+	width : 140px;
+	text-align : center;
+	height : 30px;
+	font-size : 1.1em;
+}
+
+#date
+{
+	width : 140px;
+	text-align : center;
+	height : 30px;
+	font-size : 1.1em;
+}
+
+#f_button
+{
+	width : 100px;
+	height : 30px;
+	margin-top : 5px;
+	margin-left : 25px;
+	border-radius : 15px;
+	font-size : 1.2em;
+	border : none;
+	color : #5b5b5b;
+	transition : 1s background,color ;
+}
+
+#f_button:hover
+{
+	cursor : pointer;
+	background : #5b5b5b;
+	color : black;
+}
+
+/* 
+****AUTHOR IDS
+*/
+
+#author_content
+{
+	position : absolute;
+	top : 20px;
+	left : 20px;
+	width : 600px;
+	min-height : 200px;
+}
+
+#author_name
+{
+	position :	relative;
+	width : 590px;
+	height : 38px;
+	font-size : 1.5em; 
+	border-bottom : 2px solid #444444;
+	padding-top : 10px;
+	padding-left : 10px;
+	background : #198dd1;
+}
+
+#author_dob
+{
+	position : relative;
+	width : 550px;
+	height : 20px;
+	font-size : 1em;
+	padding-left : 50px;
+	background : #777777;
+}
+
+#author_bio
+{
+	position : relative;
+	width : 580px;
+	min-height : 100px;
+	padding-left : 10px;
+	padding-right : 10px;
+	background : #b2b2b2;
+	border-bottom : 2px solid #444444;
+}
